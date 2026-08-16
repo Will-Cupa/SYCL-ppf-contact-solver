@@ -1,0 +1,4434 @@
+---
+MainSourceFile:  'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\MainSrcFiles_placehold'
+Replacements:
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\barrier\barrier.cu'
+    Offset:          129
+    Length:          0
+    ReplacementText: "#include <sycl/sycl.hpp>\r\n#include <dpct/dpct.hpp>\r\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\barrier\barrier.cu'
+    Offset:          252
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\barrier\barrier.cu'
+    Offset:          656
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\barrier\barrier.cu'
+    Offset:          1068
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\barrier\barrier.cu'
+    Offset:          1507
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\barrier\barrier.cu'
+    Offset:          3050
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\barrier\barrier.cu'
+    Offset:          3284
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\barrier\barrier.cu'
+    Offset:          3518
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\barrier\barrier.cu'
+    Offset:          3743
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\barrier\barrier.cu'
+    Offset:          3988
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\barrier\barrier.cu'
+    Offset:          4248
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\barrier\barrier.cu'
+    Offset:          4852
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\contact\contact.cu'
+    Offset:          129
+    Length:          0
+    ReplacementText: "#include <sycl/sycl.hpp>\r\n#include <dpct/dpct.hpp>\r\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\contact\contact.cu'
+    Offset:          819
+    Length:          0
+    ReplacementText: "\r\n#include <cmath>\r\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\contact\contact.cu'
+    Offset:          1046
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\contact\contact.cu'
+    Offset:          1087
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\contact\contact.cu'
+    Offset:          1140
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\contact\contact.cu'
+    Offset:          1193
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\contact\contact.cu'
+    Offset:          1248
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\contact\contact.cu'
+    Offset:          1292
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\contact\contact.cu'
+    Offset:          1812
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\contact\contact.cu'
+    Offset:          2408
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\contact\contact.cu'
+    Offset:          2563
+    Length:          11
+    ReplacementText: 'sycl::fmax(a, b)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\contact\contact.cu'
+    Offset:          2697
+    Length:          11
+    ReplacementText: 'sycl::fmin(a, b)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\contact\contact.cu'
+    Offset:          2723
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\contact\contact.cu'
+    Offset:          3621
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\contact\contact.cu'
+    Offset:          5182
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\contact\contact.cu'
+    Offset:          5512
+    Length:          10
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\contact\contact.cu'
+    Offset:          5654
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\contact\contact.cu'
+    Offset:          5706
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\contact\contact.cu'
+    Offset:          5776
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\contact\contact.cu'
+    Offset:          5915
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\contact\contact.cu'
+    Offset:          6479
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\contact\contact.cu'
+    Offset:          7100
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\contact\contact.cu'
+    Offset:          8272
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\contact\contact.cu'
+    Offset:          9608
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\contact\contact.cu'
+    Offset:          10659
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\contact\contact.cu'
+    Offset:          12876
+    Length:          8
+    ReplacementText: 'sycl::fabs(w)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\contact\contact.cu'
+    Offset:          15636
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\contact\contact.cu'
+    Offset:          16201
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\contact\contact.cu'
+    Offset:          16317
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\contact\contact.cu'
+    Offset:          17164
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\contact\contact.cu'
+    Offset:          17513
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\contact\contact.cu'
+    Offset:          17944
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\contact\contact.cu'
+    Offset:          19084
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\contact\contact.cu'
+    Offset:          29358
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\contact\contact.cu'
+    Offset:          34341
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\contact\contact.cu'
+    Offset:          37851
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\contact\contact.cu'
+    Offset:          41825
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\contact\contact.cu'
+    Offset:          44781
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\contact\contact.cu'
+    Offset:          49273
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\contact\contact.cu'
+    Offset:          52842
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\contact\contact.cu'
+    Offset:          55495
+    Length:          43
+    ReplacementText: 'sycl::fmax(gap, param.constraint_tol * fix.ghat)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\contact\contact.cu'
+    Offset:          62004
+    Length:          39
+    ReplacementText: 'sycl::fmax(gap, param.constraint_tol * ghat)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\contact\contact.cu'
+    Offset:          73808
+    Length:          10
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\contact\contact.cu'
+    Offset:          74720
+    Length:          10
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\contact\contact.cu'
+    Offset:          75753
+    Length:          10
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\contact\contact.cu'
+    Offset:          77148
+    Length:          10
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\contact\contact.cu'
+    Offset:          80778
+    Length:          10
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\contact\contact.cu'
+    Offset:          81854
+    Length:          10
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\contact\contact.cu'
+    Offset:          84905
+    Length:          10
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\contact\contact.cu'
+    Offset:          87149
+    Length:          10
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\contact\contact.cu'
+    Offset:          88078
+    Length:          10
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\contact\contact.cu'
+    Offset:          89582
+    Length:          10
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\contact\contact.cu'
+    Offset:          90851
+    Length:          10
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\contact\contact.cu'
+    Offset:          93173
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\contact\contact.cu'
+    Offset:          94328
+    Length:          18
+    ReplacementText: 'sycl::fmin(toi, result)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\contact\contact.cu'
+    Offset:          95336
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\contact\contact.cu'
+    Offset:          96411
+    Length:          18
+    ReplacementText: 'sycl::fmin(toi, result)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\contact\contact.cu'
+    Offset:          97494
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\contact\contact.cu'
+    Offset:          98640
+    Length:          18
+    ReplacementText: 'sycl::fmin(toi, result)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\contact\contact.cu'
+    Offset:          99603
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\contact\contact.cu'
+    Offset:          102561
+    Length:          18
+    ReplacementText: 'sycl::fmin(toi, result)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\contact\contact.cu'
+    Offset:          103481
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\contact\contact.cu'
+    Offset:          106561
+    Length:          19
+    ReplacementText: 'sycl::fmin(toi_0, toi_1)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\contact\contact.cu'
+    Offset:          106747
+    Length:          18
+    ReplacementText: 'sycl::fmin(toi, result)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\contact\contact.cu'
+    Offset:          108142
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\contact\contact.cu'
+    Offset:          109663
+    Length:          18
+    ReplacementText: 'sycl::fmin(toi, result)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\contact\contact.cu'
+    Offset:          110288
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\contact\contact.cu'
+    Offset:          120533
+    Length:          10
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\contact\contact.cu'
+    Offset:          121066
+    Length:          10
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\contact\contact.cu'
+    Offset:          123060
+    Length:          10
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\contact\contact.cu'
+    Offset:          124568
+    Length:          10
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\contact\contact.cu'
+    Offset:          126165
+    Length:          10
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\contact\contact.cu'
+    Offset:          127964
+    Length:          10
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\contact\contact.cu'
+    Offset:          129737
+    Length:          10
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\contact\contact.cu'
+    Offset:          132056
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\contact\contact.cu'
+    Offset:          132751
+    Length:          10
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\contact\contact.cu'
+    Offset:          133397
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\contact\contact.cu'
+    Offset:          139506
+    Length:          10
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\contact\contact.cu'
+    Offset:          140159
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\contact\contact.cu'
+    Offset:          143179
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\contact\contact.cu'
+    Offset:          143863
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\contact\contact.cu'
+    Offset:          145212
+    Length:          10
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\contact\contact.cu'
+    Offset:          145741
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\contact\contact.cu'
+    Offset:          149857
+    Length:          10
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\contact\contact.cu'
+    Offset:          152665
+    Length:          10
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\csrmat\csrmat.cu'
+    Offset:          128
+    Length:          0
+    ReplacementText: "#include <sycl/sycl.hpp>\r\n#include <dpct/dpct.hpp>\r\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\csrmat\csrmat.cu'
+    Offset:          512
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\csrmat\csrmat.cu'
+    Offset:          606
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\csrmat\csrmat.cu'
+    Offset:          882
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\csrmat\csrmat.cu'
+    Offset:          2594
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\csrmat\csrmat.cu'
+    Offset:          2900
+    Length:          27
+    ReplacementText: 'dpct::atomic_fetch_add<sycl::access::address_space::generic_space>(&max_dyn_rows, 1)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\csrmat\csrmat.cu'
+    Offset:          3396
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\csrmat\csrmat.cu'
+    Offset:          6896
+    Length:          10
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\csrmat\csrmat.cu'
+    Offset:          8454
+    Length:          10
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\csrmat\csrmat.cu'
+    Offset:          11400
+    Length:          10
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\csrmat\csrmat.cu'
+    Offset:          11665
+    Length:          10
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\csrmat\csrmat.cu'
+    Offset:          12365
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\csrmat\csrmat.cu'
+    Offset:          12501
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\csrmat\csrmat.cu'
+    Offset:          12794
+    Length:          10
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\csrmat\csrmat.cu'
+    Offset:          13589
+    Length:          10
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\csrmat\csrmat.cu'
+    Offset:          13963
+    Length:          10
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\csrmat\csrmat.cu'
+    Offset:          15382
+    Length:          10
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\csrmat\csrmat.cu'
+    Offset:          16848
+    Length:          10
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\csrmat\csrmat.cu'
+    Offset:          17427
+    Length:          10
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\csrmat\csrmat.cu'
+    Offset:          17853
+    Length:          10
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\csrmat\csrmat.cu'
+    Offset:          19002
+    Length:          10
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\csrmat\csrmat.cu'
+    Offset:          20053
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\csrmat\csrmat.cu'
+    Offset:          20144
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\csrmat\csrmat.cu'
+    Offset:          21405
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\csrmat\csrmat.cu'
+    Offset:          22282
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\csrmat\csrmat.cu'
+    Offset:          24361
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\csrmat\csrmat.cu'
+    Offset:          24658
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\eigenanalysis\eigenanalysis.cu'
+    Offset:          135
+    Length:          0
+    ReplacementText: "#include <sycl/sycl.hpp>\r\n#include <dpct/dpct.hpp>\r\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\eigenanalysis\eigenanalysis.cu'
+    Offset:          198
+    Length:          0
+    ReplacementText: "\r\n#include <cmath>\r\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\eigenanalysis\eigenanalysis.cu'
+    Offset:          231
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\eigenanalysis\eigenanalysis.cu'
+    Offset:          413
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\eigenanalysis\eigenanalysis.cu'
+    Offset:          763
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\eigenanalysis\eigenanalysis.cu'
+    Offset:          2397
+    Length:          253
+    ReplacementText: "fmaxf(0.0f, sycl::fabs(denom) > eps\r\n                       ? (table.deda[0] - table.deda[1]) / denom\r\n                       : 0.5f * (table.d2ed2a(0, 0) + table.d2ed2a(1, 1)) -\r\n                             0.5f * (table.d2ed2a(0, 1) + table.d2ed2a(1, 0)))"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\eigenanalysis\eigenanalysis.cu'
+    Offset:          3127
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\eigenanalysis\eigenanalysis.cu'
+    Offset:          4514
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\eigenanalysis\eigenanalysis.cu'
+    Offset:          5355
+    Length:          259
+    ReplacementText: "fmaxf(0.0f, sycl::fabs(denom_ab) > eps\r\n                       ? (table.deda[0] - table.deda[1]) / denom_ab\r\n                       : 0.5f * (table.d2ed2a(0, 0) + table.d2ed2a(1, 1)) -\r\n                             0.5f * (table.d2ed2a(0, 1) + table.d2ed2a(1, 0)))"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\eigenanalysis\eigenanalysis.cu'
+    Offset:          5642
+    Length:          259
+    ReplacementText: "fmaxf(0.0f, sycl::fabs(denom_ac) > eps\r\n                       ? (table.deda[0] - table.deda[2]) / denom_ac\r\n                       : 0.5f * (table.d2ed2a(0, 0) + table.d2ed2a(2, 2)) -\r\n                             0.5f * (table.d2ed2a(0, 2) + table.d2ed2a(2, 0)))"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\eigenanalysis\eigenanalysis.cu'
+    Offset:          5929
+    Length:          259
+    ReplacementText: "fmaxf(0.0f, sycl::fabs(denom_bc) > eps\r\n                       ? (table.deda[1] - table.deda[2]) / denom_bc\r\n                       : 0.5f * (table.d2ed2a(1, 1) + table.d2ed2a(2, 2)) -\r\n                             0.5f * (table.d2ed2a(1, 2) + table.d2ed2a(2, 1)))"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\eigenanalysis\eigenanalysis.cu'
+    Offset:          8482
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\eigenanalysis\eigenanalysis.cu'
+    Offset:          9932
+    Length:          259
+    ReplacementText: "fmaxf(0.0f, sycl::fabs(denom_ab) > eps\r\n                       ? (table.deda[0] - table.deda[1]) / denom_ab\r\n                       : 0.5f * (table.d2ed2a(0, 0) + table.d2ed2a(1, 1)) -\r\n                             0.5f * (table.d2ed2a(0, 1) + table.d2ed2a(1, 0)))"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\eigenanalysis\eigenanalysis.cu'
+    Offset:          10219
+    Length:          259
+    ReplacementText: "fmaxf(0.0f, sycl::fabs(denom_ac) > eps\r\n                       ? (table.deda[0] - table.deda[2]) / denom_ac\r\n                       : 0.5f * (table.d2ed2a(0, 0) + table.d2ed2a(2, 2)) -\r\n                             0.5f * (table.d2ed2a(0, 2) + table.d2ed2a(2, 0)))"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\eigenanalysis\eigenanalysis.cu'
+    Offset:          10506
+    Length:          259
+    ReplacementText: "fmaxf(0.0f, sycl::fabs(denom_bc) > eps\r\n                       ? (table.deda[1] - table.deda[2]) / denom_bc\r\n                       : 0.5f * (table.d2ed2a(1, 1) + table.d2ed2a(2, 2)) -\r\n                             0.5f * (table.d2ed2a(1, 2) + table.d2ed2a(2, 1)))"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\energy\energy.cu'
+    Offset:          128
+    Length:          0
+    ReplacementText: "#include <sycl/sycl.hpp>\r\n#include <dpct/dpct.hpp>\r\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\energy\energy.cu'
+    Offset:          583
+    Length:          0
+    ReplacementText: "\r\n#include <cmath>\r\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\energy\energy.cu'
+    Offset:          701
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\energy\energy.cu'
+    Offset:          1109
+    Length:          29
+    ReplacementText: 'sqrtf(sycl::fmax(p2 / 6.0f, 0.0f))'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\energy\energy.cu'
+    Offset:          1728
+    Length:          39
+    ReplacementText: 'sycl::fmin(1.0f, sycl::fmax(-1.0f, det_b * 0.5f))'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\energy\energy.cu'
+    Offset:          3837
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\energy\energy.cu'
+    Offset:          6057
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\energy\energy.cu'
+    Offset:          7256
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\energy\energy.cu'
+    Offset:          10251
+    Length:          18
+    ReplacementText: 'sycl::fmax(0.0f, scale)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\energy\energy.cu'
+    Offset:          11007
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\energy\energy.cu'
+    Offset:          12365
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\energy\energy.cu'
+    Offset:          16796
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\energy\energy.cu'
+    Offset:          19269
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\energy\energy.cu'
+    Offset:          25371
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\energy\energy.cu'
+    Offset:          30765
+    Length:          10
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\energy\energy.cu'
+    Offset:          33565
+    Length:          10
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\energy\energy.cu'
+    Offset:          34500
+    Length:          10
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\energy\energy.cu'
+    Offset:          34891
+    Length:          10
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\energy\energy.cu'
+    Offset:          35303
+    Length:          10
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\energy\energy.cu'
+    Offset:          36082
+    Length:          10
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\energy\energy.cu'
+    Offset:          36518
+    Length:          10
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\energy\energy.cu'
+    Offset:          37813
+    Length:          10
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\kernels\exclusive_scan.cu'
+    Offset:          136
+    Length:          0
+    ReplacementText: "#include <sycl/sycl.hpp>\r\n#include <dpct/dpct.hpp>\r\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\kernels\exclusive_scan.cu'
+    Offset:          403
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\kernels\exclusive_scan.cu'
+    Offset:          533
+    Length:          0
+    ReplacementText: "auto item_ct1 = sycl::ext::oneapi::this_work_item::get_nd_item<3>();\r\n    "
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\kernels\exclusive_scan.cu'
+    Offset:          2200
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\kernels\exclusive_scan.cu'
+    Offset:          2403
+    Length:          0
+    ReplacementText: "auto item_ct1 = sycl::ext::oneapi::this_work_item::get_nd_item<3>();\r\n    "
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\kernels\exclusive_scan.cu'
+    Offset:          2620
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\kernels\exclusive_scan.cu'
+    Offset:          2827
+    Length:          0
+    ReplacementText: "auto item_ct1 = sycl::ext::oneapi::this_work_item::get_nd_item<3>();\r\n    "
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\kernels\radix_sort.cu'
+    Offset:          246
+    Length:          0
+    ReplacementText: "\r\n#include <cmath>\r\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\kernels\radix_sort.cu'
+    Offset:          975
+    Length:          0
+    ReplacementText: "auto item_ct1 = sycl::ext::oneapi::this_work_item::get_nd_item<3>();\r\n    "
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\kernels\radix_sort.cu'
+    Offset:          2357
+    Length:          0
+    ReplacementText: "auto item_ct1 = sycl::ext::oneapi::this_work_item::get_nd_item<3>();\r\n    "
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\kernels\reduce.cu'
+    Offset:          128
+    Length:          0
+    ReplacementText: "#include <sycl/sycl.hpp>\r\n#include <dpct/dpct.hpp>\r\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\kernels\reduce.cu'
+    Offset:          208
+    Length:          0
+    ReplacementText: "\r\n#include <cmath>\r\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\kernels\reduce.cu'
+    Offset:          235
+    Length:          9
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\kernels\reduce.cu'
+    Offset:          244
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\kernels\reduce.cu'
+    Offset:          372
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\kernels\reduce.cu'
+    Offset:          609
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\kernels\reduce.cu'
+    Offset:          670
+    Length:          0
+    ReplacementText: "auto item_ct1 = sycl::ext::oneapi::this_work_item::get_nd_item<3>();\r\n    "
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\kernels\reduce.cu'
+    Offset:          1461
+    Length:          0
+    ReplacementText: "auto item_ct1 = sycl::ext::oneapi::this_work_item::get_nd_item<3>();\r\n    "
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\kernels\reduce.cu'
+    Offset:          2071
+    Length:          0
+    ReplacementText: "auto item_ct1 = sycl::ext::oneapi::this_work_item::get_nd_item<3>();\r\n    "
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\kernels\reduce.cu'
+    Offset:          2393
+    Length:          10
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\kernels\reduce.cu'
+    Offset:          2967
+    Length:          0
+    ReplacementText: "auto item_ct1 = sycl::ext::oneapi::this_work_item::get_nd_item<3>();\r\n    "
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\kernels\reduce.cu'
+    Offset:          3148
+    Length:          6
+    ReplacementText: 'sycl::float2'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\kernels\reduce.cu'
+    Offset:          3192
+    Length:          6
+    ReplacementText: 'sycl::float2'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\kernels\reduce.cu'
+    Offset:          3221
+    Length:          6
+    ReplacementText: 'sycl::float2'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\kernels\reduce.cu'
+    Offset:          3265
+    Length:          6
+    ReplacementText: 'sycl::float2'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\kernels\reduce.cu'
+    Offset:          3476
+    Length:          6
+    ReplacementText: 'sycl::float2'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\kernels\reduce.cu'
+    Offset:          3515
+    Length:          6
+    ReplacementText: 'sycl::float2'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\kernels\reduce.cu'
+    Offset:          3558
+    Length:          6
+    ReplacementText: 'sycl::float2'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\kernels\reduce.cu'
+    Offset:          3601
+    Length:          6
+    ReplacementText: 'sycl::float2'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\kernels\reduce.cu'
+    Offset:          3646
+    Length:          6
+    ReplacementText: 'sycl::float2'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\kernels\reduce.cu'
+    Offset:          3685
+    Length:          6
+    ReplacementText: 'sycl::float2'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\kernels\reduce.cu'
+    Offset:          3728
+    Length:          6
+    ReplacementText: 'sycl::float2'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\kernels\reduce.cu'
+    Offset:          3771
+    Length:          6
+    ReplacementText: 'sycl::float2'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\kernels\reduce.cu'
+    Offset:          4382
+    Length:          0
+    ReplacementText: "        /*\r\n        DPCT1013:0: The rounding mode could not be specified and the generated code may have different accuracy than the original code. Verify the correctness. SYCL math built-in function rounding mode is aligned with OpenCL C 1.2 standard.\r\n        */\r\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\kernels\reduce.cu'
+    Offset:          4403
+    Length:          43
+    ReplacementText: 'sycl::fma(input1[i], input2[i], thread_sum)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\kernels\reduce.cu'
+    Offset:          4481
+    Length:          10
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\kernels\reduce.cu'
+    Offset:          4841
+    Length:          0
+    ReplacementText: "auto item_ct1 = sycl::ext::oneapi::this_work_item::get_nd_item<3>();\r\n    "
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\kernels\reduce.cu'
+    Offset:          5595
+    Length:          10
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\kernels\reduce.cu'
+    Offset:          5905
+    Length:          0
+    ReplacementText: "auto item_ct1 = sycl::ext::oneapi::this_work_item::get_nd_item<3>();\r\n    "
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\kernels\reduce.cu'
+    Offset:          8761
+    Length:          10
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\kernels\reduce.cu'
+    Offset:          9028
+    Length:          10
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\kernels\reduce.cu'
+    Offset:          10091
+    Length:          10
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\kernels\reduce.cu'
+    Offset:          10682
+    Length:          10
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\kernels\reduce.cu'
+    Offset:          11235
+    Length:          10
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\kernels\reduce.cu'
+    Offset:          11430
+    Length:          10
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\kernels\reduce.cu'
+    Offset:          11685
+    Length:          10
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\kernels\reduce.cu'
+    Offset:          12532
+    Length:          12
+    ReplacementText: 'dpct::queue_ptr'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\kernels\reduce.cu'
+    Offset:          12617
+    Length:          10
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\kernels\reduce.cu'
+    Offset:          13278
+    Length:          12
+    ReplacementText: 'dpct::queue_ptr'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\kernels\reduce.cu'
+    Offset:          14365
+    Length:          12
+    ReplacementText: 'dpct::queue_ptr'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\kernels\reduce.cu'
+    Offset:          14696
+    Length:          10
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\kernels\vec_ops.cu'
+    Offset:          129
+    Length:          0
+    ReplacementText: "#include <sycl/sycl.hpp>\r\n#include <dpct/dpct.hpp>\r\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\kernels\vec_ops.cu'
+    Offset:          259
+    Length:          0
+    ReplacementText: "\r\n#include <cmath>\r\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\kernels\vec_ops.cu'
+    Offset:          375
+    Length:          0
+    ReplacementText: "auto item_ct1 = sycl::ext::oneapi::this_work_item::get_nd_item<3>();\r\n    "
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\kernels\vec_ops.cu'
+    Offset:          583
+    Length:          0
+    ReplacementText: "auto item_ct1 = sycl::ext::oneapi::this_work_item::get_nd_item<3>();\r\n    "
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\kernels\vec_ops.cu'
+    Offset:          807
+    Length:          0
+    ReplacementText: "auto item_ct1 = sycl::ext::oneapi::this_work_item::get_nd_item<3>();\r\n    "
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\kernels\vec_ops.cu'
+    Offset:          1088
+    Length:          0
+    ReplacementText: "auto item_ct1 = sycl::ext::oneapi::this_work_item::get_nd_item<3>();\r\n    "
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\kernels\vec_ops.cu'
+    Offset:          1524
+    Length:          0
+    ReplacementText: "auto item_ct1 = sycl::ext::oneapi::this_work_item::get_nd_item<3>();\r\n    "
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\kernels\vec_ops.cu'
+    Offset:          1920
+    Length:          0
+    ReplacementText: "auto item_ct1 = sycl::ext::oneapi::this_work_item::get_nd_item<3>();\r\n    "
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\kernels\vec_ops.cu'
+    Offset:          2788
+    Length:          12
+    ReplacementText: 'dpct::queue_ptr'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\kernels\vec_ops.cu'
+    Offset:          3176
+    Length:          12
+    ReplacementText: 'dpct::queue_ptr'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\kernels\vec_ops.cu'
+    Offset:          3575
+    Length:          12
+    ReplacementText: 'dpct::queue_ptr'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\kernels\vec_ops.cu'
+    Offset:          4017
+    Length:          12
+    ReplacementText: 'dpct::queue_ptr'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\kernels\vec_ops.cu'
+    Offset:          4535
+    Length:          12
+    ReplacementText: 'dpct::queue_ptr'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\kernels\vec_ops.cu'
+    Offset:          5023
+    Length:          12
+    ReplacementText: 'dpct::queue_ptr'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\kernels\vec_ops.cu'
+    Offset:          5450
+    Length:          12
+    ReplacementText: 'dpct::queue_ptr'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\kernels\vec_ops.cu'
+    Offset:          5641
+    Length:          12
+    ReplacementText: 'dpct::queue_ptr'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\kernels\vec_ops.cu'
+    Offset:          5824
+    Length:          12
+    ReplacementText: 'dpct::queue_ptr'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\lbvh\lbvh.cu'
+    Offset:          116
+    Length:          0
+    ReplacementText: "#include <sycl/sycl.hpp>\r\n#include <dpct/dpct.hpp>\r\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\lbvh\lbvh.cu'
+    Offset:          364
+    Length:          0
+    ReplacementText: "\r\n#include <cmath>\r\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\lbvh\lbvh.cu'
+    Offset:          3993
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\lbvh\lbvh.cu'
+    Offset:          4213
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\lbvh\lbvh.cu'
+    Offset:          4368
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\lbvh\lbvh.cu'
+    Offset:          4600
+    Length:          0
+    ReplacementText: "auto item_ct1 = sycl::ext::oneapi::this_work_item::get_nd_item<3>();\r\n    "
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\lbvh\lbvh.cu'
+    Offset:          5017
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\lbvh\lbvh.cu'
+    Offset:          5249
+    Length:          0
+    ReplacementText: "auto item_ct1 = sycl::ext::oneapi::this_work_item::get_nd_item<3>();\r\n    "
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\lbvh\lbvh.cu'
+    Offset:          5591
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\lbvh\lbvh.cu'
+    Offset:          5810
+    Length:          0
+    ReplacementText: "auto item_ct1 = sycl::ext::oneapi::this_work_item::get_nd_item<3>();\r\n    "
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\lbvh\lbvh.cu'
+    Offset:          6092
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\lbvh\lbvh.cu'
+    Offset:          6608
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\lbvh\lbvh.cu'
+    Offset:          7048
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\lbvh\lbvh.cu'
+    Offset:          7267
+    Length:          0
+    ReplacementText: "auto item_ct1 = sycl::ext::oneapi::this_work_item::get_nd_item<3>();\r\n    "
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\lbvh\lbvh.cu'
+    Offset:          8719
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\lbvh\lbvh.cu'
+    Offset:          8878
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\lbvh\lbvh.cu'
+    Offset:          9236
+    Length:          0
+    ReplacementText: "auto item_ct1 = sycl::ext::oneapi::this_work_item::get_nd_item<3>();\r\n    "
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\lbvh\lbvh.cu'
+    Offset:          9757
+    Length:          54
+    ReplacementText: 'sycl::fmin(1023.0f, sycl::fmax(0.0f, (cx[i] - min_x) * scale_x))'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\lbvh\lbvh.cu'
+    Offset:          9851
+    Length:          54
+    ReplacementText: 'sycl::fmin(1023.0f, sycl::fmax(0.0f, (cy[i] - min_y) * scale_y))'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\lbvh\lbvh.cu'
+    Offset:          9945
+    Length:          54
+    ReplacementText: 'sycl::fmin(1023.0f, sycl::fmax(0.0f, (cz[i] - min_z) * scale_z))'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\lbvh\lbvh.cu'
+    Offset:          10343
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\lbvh\lbvh.cu'
+    Offset:          10493
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\lbvh\lbvh.cu'
+    Offset:          11033
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\lbvh\lbvh.cu'
+    Offset:          11970
+    Length:          9
+    ReplacementText: 'std::min(i, j)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\lbvh\lbvh.cu'
+    Offset:          11994
+    Length:          9
+    ReplacementText: 'std::max(i, j)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\lbvh\lbvh.cu'
+    Offset:          12438
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\lbvh\lbvh.cu'
+    Offset:          12518
+    Length:          0
+    ReplacementText: "auto item_ct1 = sycl::ext::oneapi::this_work_item::get_nd_item<3>();\r\n    "
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\lbvh\lbvh.cu'
+    Offset:          12781
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\lbvh\lbvh.cu'
+    Offset:          13012
+    Length:          0
+    ReplacementText: "auto item_ct1 = sycl::ext::oneapi::this_work_item::get_nd_item<3>();\r\n    "
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\lbvh\lbvh.cu'
+    Offset:          13978
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\lbvh\lbvh.cu'
+    Offset:          14124
+    Length:          0
+    ReplacementText: "auto item_ct1 = sycl::ext::oneapi::this_work_item::get_nd_item<3>();\r\n    "
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\lbvh\lbvh.cu'
+    Offset:          14578
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\lbvh\lbvh.cu'
+    Offset:          14741
+    Length:          0
+    ReplacementText: "auto item_ct1 = sycl::ext::oneapi::this_work_item::get_nd_item<3>();\r\n    "
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\lbvh\lbvh.cu'
+    Offset:          15154
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\lbvh\lbvh.cu'
+    Offset:          15318
+    Length:          0
+    ReplacementText: "auto item_ct1 = sycl::ext::oneapi::this_work_item::get_nd_item<3>();\r\n    "
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\lbvh\lbvh.cu'
+    Offset:          15611
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\lbvh\lbvh.cu'
+    Offset:          15751
+    Length:          0
+    ReplacementText: "auto item_ct1 = sycl::ext::oneapi::this_work_item::get_nd_item<3>();\r\n    "
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\lbvh\lbvh.cu'
+    Offset:          16260
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\lbvh\lbvh.cu'
+    Offset:          16399
+    Length:          0
+    ReplacementText: "auto item_ct1 = sycl::ext::oneapi::this_work_item::get_nd_item<3>();\r\n    "
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\lbvh\lbvh.cu'
+    Offset:          16478
+    Length:          37
+    ReplacementText: 'dpct::atomic_fetch_add<sycl::access::address_space::generic_space>(&level_counts[depth[i]], 1)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\lbvh\lbvh.cu'
+    Offset:          16573
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\lbvh\lbvh.cu'
+    Offset:          16862
+    Length:          0
+    ReplacementText: "auto item_ct1 = sycl::ext::oneapi::this_work_item::get_nd_item<3>();\r\n    "
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\lbvh\lbvh.cu'
+    Offset:          23729
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\lbvh\lbvh.cu'
+    Offset:          24045
+    Length:          0
+    ReplacementText: "auto item_ct1 = sycl::ext::oneapi::this_work_item::get_nd_item<3>();\r\n    "
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\lbvh\lbvh.cu'
+    Offset:          24909
+    Length:          57
+    ReplacementText: 'sycl::fmin(float(z10[d]), sycl::fmin(float(z11[d]), float(z12[d])))'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\lbvh\lbvh.cu'
+    Offset:          24991
+    Length:          57
+    ReplacementText: 'sycl::fmax(float(z10[d]), sycl::fmax(float(z11[d]), float(z12[d])))'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\lbvh\lbvh.cu'
+    Offset:          25078
+    Length:          19
+    ReplacementText: 'sycl::fmin(minv0, minv1)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\lbvh\lbvh.cu'
+    Offset:          25137
+    Length:          19
+    ReplacementText: 'sycl::fmax(maxv0, maxv1)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\lbvh\lbvh.cu'
+    Offset:          25265
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\lbvh\lbvh.cu'
+    Offset:          25581
+    Length:          0
+    ReplacementText: "auto item_ct1 = sycl::ext::oneapi::this_work_item::get_nd_item<3>();\r\n    "
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\lbvh\lbvh.cu'
+    Offset:          26312
+    Length:          35
+    ReplacementText: 'sycl::fmin(float(z10[d]), float(z11[d]))'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\lbvh\lbvh.cu'
+    Offset:          26372
+    Length:          35
+    ReplacementText: 'sycl::fmax(float(z10[d]), float(z11[d]))'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\lbvh\lbvh.cu'
+    Offset:          26437
+    Length:          19
+    ReplacementText: 'sycl::fmin(minv0, minv1)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\lbvh\lbvh.cu'
+    Offset:          26496
+    Length:          19
+    ReplacementText: 'sycl::fmax(maxv0, maxv1)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\lbvh\lbvh.cu'
+    Offset:          26627
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\lbvh\lbvh.cu'
+    Offset:          26849
+    Length:          0
+    ReplacementText: "auto item_ct1 = sycl::ext::oneapi::this_work_item::get_nd_item<3>();\r\n    "
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\lbvh\lbvh.cu'
+    Offset:          27339
+    Length:          33
+    ReplacementText: 'sycl::fmin(float(y0[d]), float(z1[d]))'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\lbvh\lbvh.cu'
+    Offset:          27396
+    Length:          33
+    ReplacementText: 'sycl::fmax(float(y0[d]), float(z1[d]))'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\lbvh\lbvh.cu'
+    Offset:          27644
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\lbvh\lbvh.cu'
+    Offset:          27842
+    Length:          0
+    ReplacementText: "auto item_ct1 = sycl::ext::oneapi::this_work_item::get_nd_item<3>();\r\n    "
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\lbvh\lbvh.cu'
+    Offset:          29048
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\lbvh\lbvh.cu'
+    Offset:          29311
+    Length:          0
+    ReplacementText: "auto item_ct1 = sycl::ext::oneapi::this_work_item::get_nd_item<3>();\r\n    "
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\main\main.cu'
+    Offset:          249
+    Length:          0
+    ReplacementText: "#include <sycl/sycl.hpp>\r\n#include <dpct/dpct.hpp>\r\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\main\main.cu'
+    Offset:          1053
+    Length:          0
+    ReplacementText: "\r\n#include <cmath>\r\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\main\main.cu'
+    Offset:          2777
+    Length:          10
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\main\main.cu'
+    Offset:          3028
+    Length:          10
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\main\main.cu'
+    Offset:          3281
+    Length:          10
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\main\main.cu'
+    Offset:          17053
+    Length:          10
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\main\main.cu'
+    Offset:          19308
+    Length:          10
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\main\main.cu'
+    Offset:          20364
+    Length:          39
+    ReplacementText: 'sycl::fmin(fparam.shrink_x, fparam.shrink_y)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\main\main.cu'
+    Offset:          20901
+    Length:          10
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\main\main.cu'
+    Offset:          22332
+    Length:          10
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\main\main.cu'
+    Offset:          24686
+    Length:          10
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\main\main.cu'
+    Offset:          28443
+    Length:          10
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\main\main.cu'
+    Offset:          35921
+    Length:          10
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\main\main.cu'
+    Offset:          47278
+    Length:          10
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\main\main.cu'
+    Offset:          51298
+    Length:          10
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\main\main.cu'
+    Offset:          56417
+    Length:          10
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\main\main.cu'
+    Offset:          57179
+    Length:          32
+    ReplacementText: 'sycl::fmin(1.0f, prm.max_dx / max_dx)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\main\main.cu'
+    Offset:          58149
+    Length:          10
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\main\main.cu'
+    Offset:          58644
+    Length:          10
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\main\main.cu'
+    Offset:          65818
+    Length:          18
+    ReplacementText: 'sycl::fmin(toi, SL_toi)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\main\main.cu'
+    Offset:          66617
+    Length:          25
+    ReplacementText: 'sycl::fmin(SL_toi, SL_rod_toi)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\main\main.cu'
+    Offset:          66663
+    Length:          22
+    ReplacementText: 'sycl::fmin(toi, SL_rod_toi)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\main\main.cu'
+    Offset:          68150
+    Length:          10
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\main\main.cu'
+    Offset:          74960
+    Length:          10
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\main\main.cu'
+    Offset:          105001
+    Length:          10
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\main\main.cu'
+    Offset:          106223
+    Length:          10
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\main\main.cu'
+    Offset:          107910
+    Length:          10
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\main\main.cu'
+    Offset:          111336
+    Length:          10
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\main\main.cu'
+    Offset:          112013
+    Length:          10
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\main\main.cu'
+    Offset:          112383
+    Length:          10
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\plasticity\plasticity.cu'
+    Offset:          51
+    Length:          0
+    ReplacementText: "#include <sycl/sycl.hpp>\r\n#include <dpct/dpct.hpp>\r\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\plasticity\plasticity.cu'
+    Offset:          226
+    Length:          0
+    ReplacementText: "\r\n#include <cmath>\r\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\plasticity\plasticity.cu'
+    Offset:          256
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\plasticity\plasticity.cu'
+    Offset:          1147
+    Length:          10
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\plasticity\plasticity.cu'
+    Offset:          3349
+    Length:          10
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\plasticity\plasticity.cu'
+    Offset:          5332
+    Length:          10
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\plasticity\plasticity.cu'
+    Offset:          6207
+    Length:          12
+    ReplacementText: 'sycl::fabs(delta)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\plasticity\plasticity.cu'
+    Offset:          6957
+    Length:          10
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\plasticity\plasticity.cu'
+    Offset:          8414
+    Length:          16
+    ReplacementText: 'sycl::acos(cos_theta)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\plasticity\plasticity.cu'
+    Offset:          8538
+    Length:          12
+    ReplacementText: 'sycl::fabs(delta)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\schwarz\schwarz.cu'
+    Offset:          129
+    Length:          0
+    ReplacementText: "#include <sycl/sycl.hpp>\r\n#include <dpct/dpct.hpp>\r\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\schwarz\schwarz.cu'
+    Offset:          721
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\schwarz\schwarz.cu'
+    Offset:          1087
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\schwarz\schwarz.cu'
+    Offset:          1655
+    Length:          9
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\schwarz\schwarz.cu'
+    Offset:          1664
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\schwarz\schwarz.cu'
+    Offset:          1749
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\schwarz\schwarz.cu'
+    Offset:          1997
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\schwarz\schwarz.cu'
+    Offset:          2228
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\schwarz\schwarz.cu'
+    Offset:          2936
+    Length:          9
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\schwarz\schwarz.cu'
+    Offset:          3402
+    Length:          9
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\schwarz\schwarz.cu'
+    Offset:          4351
+    Length:          11
+    ReplacementText: 'dpct::err0'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\schwarz\schwarz.cu'
+    Offset:          5490
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\schwarz\schwarz.cu'
+    Offset:          6448
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\schwarz\schwarz.cu'
+    Offset:          6727
+    Length:          0
+    ReplacementText: "auto item_ct1 = sycl::ext::oneapi::this_work_item::get_nd_item<3>();\r\n    "
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\schwarz\schwarz.cu'
+    Offset:          13317
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\schwarz\schwarz.cu'
+    Offset:          13551
+    Length:          0
+    ReplacementText: "auto item_ct1 = sycl::ext::oneapi::this_work_item::get_nd_item<3>();\r\n    "
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\schwarz\schwarz.cu'
+    Offset:          19293
+    Length:          10
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\schwarz\schwarz.cu'
+    Offset:          20866
+    Length:          10
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\schwarz\schwarz.cu'
+    Offset:          21922
+    Length:          10
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\schwarz\schwarz.cu'
+    Offset:          28835
+    Length:          10
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\schwarz\schwarz.cu'
+    Offset:          29906
+    Length:          10
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\schwarz\schwarz.cu'
+    Offset:          31812
+    Length:          10
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\schwarz\schwarz.cu'
+    Offset:          32740
+    Length:          10
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\schwarz\schwarz.cu'
+    Offset:          34884
+    Length:          10
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\schwarz\schwarz.cu'
+    Offset:          35873
+    Length:          10
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\schwarz\schwarz.cu'
+    Offset:          36462
+    Length:          10
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\schwarz\schwarz.cu'
+    Offset:          37562
+    Length:          10
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\schwarz\schwarz.cu'
+    Offset:          40584
+    Length:          10
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\schwarz\schwarz.cu'
+    Offset:          40789
+    Length:          10
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\schwarz\schwarz.cu'
+    Offset:          41269
+    Length:          10
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\schwarz\schwarz.cu'
+    Offset:          41571
+    Length:          10
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\schwarz\schwarz.cu'
+    Offset:          42002
+    Length:          10
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\schwarz\schwarz.cu'
+    Offset:          43345
+    Length:          10
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\schwarz\schwarz.cu'
+    Offset:          45652
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\schwarz\schwarz.cu'
+    Offset:          45928
+    Length:          0
+    ReplacementText: "auto item_ct1 = sycl::ext::oneapi::this_work_item::get_nd_item<3>();\r\n    "
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\schwarz\schwarz.cu'
+    Offset:          49994
+    Length:          10
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\schwarz\schwarz.cu'
+    Offset:          51064
+    Length:          10
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\schwarz\schwarz.cu'
+    Offset:          53442
+    Length:          10
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\schwarz\schwarz.cu'
+    Offset:          53983
+    Length:          10
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\schwarz\schwarz.cu'
+    Offset:          54822
+    Length:          10
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\schwarz\schwarz.cu'
+    Offset:          55002
+    Length:          10
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\schwarz\schwarz.cu'
+    Offset:          55896
+    Length:          10
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\schwarz\schwarz.cu'
+    Offset:          57121
+    Length:          10
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\schwarz\schwarz.cu'
+    Offset:          57296
+    Length:          10
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\schwarz\schwarz.cu'
+    Offset:          57666
+    Length:          10
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\schwarz\schwarz.cu'
+    Offset:          57881
+    Length:          10
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\schwarz\schwarz.cu'
+    Offset:          58199
+    Length:          10
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\schwarz\schwarz.cu'
+    Offset:          59012
+    Length:          12
+    ReplacementText: 'dpct::queue_ptr'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\schwarz\schwarz.cu'
+    Offset:          59120
+    Length:          10
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\schwarz\schwarz.cu'
+    Offset:          59312
+    Length:          10
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\schwarz\schwarz.cu'
+    Offset:          60146
+    Length:          12
+    ReplacementText: 'dpct::queue_ptr'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\schwarz\schwarz.cu'
+    Offset:          60303
+    Length:          10
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\schwarz\schwarz.cu'
+    Offset:          63579
+    Length:          10
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\schwarz\schwarz.cu'
+    Offset:          63893
+    Length:          10
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\schwarz\schwarz.cu'
+    Offset:          67551
+    Length:          10
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\schwarz\schwarz.cu'
+    Offset:          68440
+    Length:          12
+    ReplacementText: 'dpct::queue_ptr'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\solver\solver.cu'
+    Offset:          128
+    Length:          0
+    ReplacementText: "#include <sycl/sycl.hpp>\r\n#include <dpct/dpct.hpp>\r\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\solver\solver.cu'
+    Offset:          5070
+    Length:          9
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\solver\solver.cu'
+    Offset:          5079
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\solver\solver.cu'
+    Offset:          5568
+    Length:          9
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\solver\solver.cu'
+    Offset:          5577
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\solver\solver.cu'
+    Offset:          10573
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\solver\solver.cu'
+    Offset:          10640
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\solver\solver.cu'
+    Offset:          10963
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\solver\solver.cu'
+    Offset:          11438
+    Length:          12
+    ReplacementText: 'dpct::queue_ptr'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\solver\solver.cu'
+    Offset:          11901
+    Length:          10
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\solver\solver.cu'
+    Offset:          13796
+    Length:          12
+    ReplacementText: 'dpct::queue_ptr'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\solver\solver.cu'
+    Offset:          14091
+    Length:          12
+    ReplacementText: 'dpct::queue_ptr'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\solver\solver.cu'
+    Offset:          15162
+    Length:          10
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\solver\solver.cu'
+    Offset:          16252
+    Length:          10
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\solver\solver.cu'
+    Offset:          16707
+    Length:          12
+    ReplacementText: 'dpct::queue_ptr'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\solver\solver.cu'
+    Offset:          16798
+    Length:          10
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\solver\solver.cu'
+    Offset:          18771
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\solver\solver.cu'
+    Offset:          21203
+    Length:          12
+    ReplacementText: 'dpct::queue_ptr'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\solver\solver.cu'
+    Offset:          21249
+    Length:          12
+    ReplacementText: 'dpct::queue_ptr'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\solver\solver.cu'
+    Offset:          22352
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\solver\solver.cu'
+    Offset:          23088
+    Length:          0
+    ReplacementText: "auto item_ct1 = sycl::ext::oneapi::this_work_item::get_nd_item<3>();\r\n    "
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\solver\solver.cu'
+    Offset:          25974
+    Length:          12
+    ReplacementText: 'sycl::fabs(ri[k])'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\solver\solver.cu'
+    Offset:          26468
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\solver\solver.cu'
+    Offset:          26958
+    Length:          0
+    ReplacementText: "auto item_ct1 = sycl::ext::oneapi::this_work_item::get_nd_item<3>();\r\n    "
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\solver\solver.cu'
+    Offset:          29143
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\solver\solver.cu'
+    Offset:          29642
+    Length:          0
+    ReplacementText: "auto item_ct1 = sycl::ext::oneapi::this_work_item::get_nd_item<3>();\r\n    "
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\solver\solver.cu'
+    Offset:          30828
+    Length:          9
+    ReplacementText: 'sycl::fabs(rj)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\solver\solver.cu'
+    Offset:          31331
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\solver\solver.cu'
+    Offset:          31593
+    Length:          0
+    ReplacementText: "auto item_ct1 = sycl::ext::oneapi::this_work_item::get_nd_item<3>();\r\n    "
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\solver\solver.cu'
+    Offset:          32346
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\solver\solver.cu'
+    Offset:          32473
+    Length:          0
+    ReplacementText: "auto item_ct1 = sycl::ext::oneapi::this_work_item::get_nd_item<3>();\r\n    "
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\solver\solver.cu'
+    Offset:          33929
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\solver\solver.cu'
+    Offset:          34209
+    Length:          0
+    ReplacementText: "auto item_ct1 = sycl::ext::oneapi::this_work_item::get_nd_item<3>();\r\n    "
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\solver\solver.cu'
+    Offset:          35771
+    Length:          11
+    ReplacementText: 'sycl::fabs(term)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\solver\solver.cu'
+    Offset:          35943
+    Length:          11
+    ReplacementText: 'sycl::fabs(term)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\solver\solver.cu'
+    Offset:          36782
+    Length:          11
+    ReplacementText: 'sycl::fabs(term)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\solver\solver.cu'
+    Offset:          36954
+    Length:          11
+    ReplacementText: 'sycl::fabs(term)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\solver\solver.cu'
+    Offset:          37638
+    Length:          11
+    ReplacementText: 'sycl::fabs(term)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\solver\solver.cu'
+    Offset:          38891
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\solver\solver.cu'
+    Offset:          39229
+    Length:          0
+    ReplacementText: "auto item_ct1 = sycl::ext::oneapi::this_work_item::get_nd_item<3>();\r\n    "
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\solver\solver.cu'
+    Offset:          43019
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\solver\solver.cu'
+    Offset:          44821
+    Length:          12
+    ReplacementText: 'dpct::queue_ptr'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\solver\solver.cu'
+    Offset:          59155
+    Length:          0
+    ReplacementText: "        /*\r\n        DPCT1119:1: Migration of cudaGraph_t is not supported, please try to remigrate with option: --use-experimental-features=graph.\r\n        */\r\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\solver\solver.cu'
+    Offset:          59192
+    Length:          0
+    ReplacementText: "        /*\r\n        DPCT1119:2: Migration of cudaGraphExec_t is not supported, please try to remigrate with option: --use-experimental-features=graph.\r\n        */\r\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\solver\solver.cu'
+    Offset:          60035
+    Length:          11
+    ReplacementText: 'dpct::err0'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\solver\solver.cu'
+    Offset:          60916
+    Length:          0
+    ReplacementText: "                    /*\r\n                    DPCT1119:3: Migration of cudaGraph_t is not supported, please try to remigrate with option: --use-experimental-features=graph.\r\n                    */\r\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\solver\solver.cu'
+    Offset:          82336
+    Length:          12
+    ReplacementText: 'dpct::queue_ptr'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\solver\solver.cu'
+    Offset:          91335
+    Length:          10
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\solver\solver.cu'
+    Offset:          91657
+    Length:          10
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\solver\solver.cu'
+    Offset:          91836
+    Length:          14
+    ReplacementText: 'sycl::fabs(body[k])'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\solver\solver.cu'
+    Offset:          93313
+    Length:          10
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\solver\solver.cu'
+    Offset:          99211
+    Length:          10
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\solver\solver.cu'
+    Offset:          99614
+    Length:          10
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\solver\solver.cu'
+    Offset:          99805
+    Length:          11
+    ReplacementText: 'sycl::fabs(q[k])'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\solver\solver.cu'
+    Offset:          102383
+    Length:          10
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\solver\solver.cu'
+    Offset:          106300
+    Length:          10
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\solver\solver.cu'
+    Offset:          108642
+    Length:          10
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\strainlimiting\strainlimiting.cu'
+    Offset:          136
+    Length:          0
+    ReplacementText: "#include <sycl/sycl.hpp>\r\n#include <dpct/dpct.hpp>\r\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\strainlimiting\strainlimiting.cu'
+    Offset:          414
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\strainlimiting\strainlimiting.cu'
+    Offset:          525
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\strainlimiting\strainlimiting.cu'
+    Offset:          2135
+    Length:          10
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\strainlimiting\strainlimiting.cu'
+    Offset:          4308
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\strainlimiting\strainlimiting.cu'
+    Offset:          5797
+    Length:          10
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\strainlimiting\strainlimiting.cu'
+    Offset:          8866
+    Length:          10
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\strainlimiting\strainlimiting.cu'
+    Offset:          11228
+    Length:          10
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\strainlimiting\strainlimiting.cu'
+    Offset:          11534
+    Length:          39
+    ReplacementText: 'sycl::fmin(fparam.shrink_x, fparam.shrink_y)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\utility\dispatcher.cu'
+    Offset:          132
+    Length:          0
+    ReplacementText: "#include <sycl/sycl.hpp>\r\n#include <dpct/dpct.hpp>\r\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\utility\dispatcher.cu'
+    Offset:          630
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\utility\dispatcher.cu'
+    Offset:          685
+    Length:          0
+    ReplacementText: "auto item_ct1 = sycl::ext::oneapi::this_work_item::get_nd_item<3>();\r\n    "
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\utility\dispatcher.cu'
+    Offset:          2594
+    Length:          12
+    ReplacementText: 'dpct::queue_ptr'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\utility\utility.cu'
+    Offset:          129
+    Length:          0
+    ReplacementText: "#include <sycl/sycl.hpp>\r\n#include <dpct/dpct.hpp>\r\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\utility\utility.cu'
+    Offset:          277
+    Length:          0
+    ReplacementText: "\r\n#include <cmath>\r\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\utility\utility.cu'
+    Offset:          323
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\utility\utility.cu'
+    Offset:          1055
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\utility\utility.cu'
+    Offset:          1264
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\utility\utility.cu'
+    Offset:          2703
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\utility\utility.cu'
+    Offset:          3963
+    Length:          11
+    ReplacementText: 'sycl::fabs(zeta)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\utility\utility.cu'
+    Offset:          5576
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\utility\utility.cu'
+    Offset:          5797
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\utility\utility.cu'
+    Offset:          6030
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\utility\utility.cu'
+    Offset:          6209
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\utility\utility.cu'
+    Offset:          6375
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\utility\utility.cu'
+    Offset:          6919
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\utility\utility.cu'
+    Offset:          7416
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\utility\utility.cu'
+    Offset:          8019
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\utility\utility.cu'
+    Offset:          9341
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\utility\utility.cu'
+    Offset:          10517
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\utility\utility.cu'
+    Offset:          10783
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\utility\utility.cu'
+    Offset:          11087
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\utility\utility.cu'
+    Offset:          11721
+    Length:          10
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\utility\utility.cu'
+    Offset:          12048
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+MainSourceFilesDigest:
+  - MainSourceFile:  'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\barrier\barrier.cu'
+    Digest:          2bfeb499ad20237f8851f5e8b55ea526
+    HasCUDASyntax:   true
+  - MainSourceFile:  'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\contact\contact.cu'
+    Digest:          20aa7404b2755b7a38b7d8e4e3f3ae11
+    HasCUDASyntax:   true
+  - MainSourceFile:  'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\csrmat\csrmat.cu'
+    Digest:          b97fb744e7d2e77a27ec47b956d8dbdb
+    HasCUDASyntax:   true
+  - MainSourceFile:  'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\eigenanalysis\eigenanalysis.cu'
+    Digest:          2d86031ccc4026c8edd7be4e783eb6f0
+    HasCUDASyntax:   true
+  - MainSourceFile:  'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\energy\energy.cu'
+    Digest:          21dc6003a4989f1ddfc3fe33a1351875
+    HasCUDASyntax:   true
+  - MainSourceFile:  'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\kernels\exclusive_scan.cu'
+    Digest:          5147667575370b199ce5a6a46229f9b8
+    HasCUDASyntax:   true
+  - MainSourceFile:  'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\kernels\radix_sort.cu'
+    Digest:          14759405314cfdc7682de3902936be5a
+    HasCUDASyntax:   true
+  - MainSourceFile:  'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\kernels\reduce.cu'
+    Digest:          e7b716aa13afa2e5145504431e4e49da
+    HasCUDASyntax:   true
+  - MainSourceFile:  'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\kernels\vec_ops.cu'
+    Digest:          2aa9d03e7973e03e6dceb302f42c52d8
+    HasCUDASyntax:   true
+  - MainSourceFile:  'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\lbvh\lbvh.cu'
+    Digest:          68352763252ebe7ec317f647405df17a
+    HasCUDASyntax:   true
+  - MainSourceFile:  'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\main\main.cu'
+    Digest:          4f63cd4d581816f536e2107ef790daa6
+    HasCUDASyntax:   true
+  - MainSourceFile:  'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\plasticity\plasticity.cu'
+    Digest:          10d412e71c50e6e9bce4ae496ab65b96
+    HasCUDASyntax:   true
+  - MainSourceFile:  'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\schwarz\schwarz.cu'
+    Digest:          b1499d28853262408df1bf0c5f235a2c
+    HasCUDASyntax:   true
+  - MainSourceFile:  'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\solver\solver.cu'
+    Digest:          9d3dcd7132968138e32761feed4a5ae6
+    HasCUDASyntax:   true
+  - MainSourceFile:  'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\strainlimiting\strainlimiting.cu'
+    Digest:          78a1e741c7af5f050b9879a0918d5b33
+    HasCUDASyntax:   true
+  - MainSourceFile:  'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\utility\dispatcher.cu'
+    Digest:          f231d1fc48e71864700aaec60f31523c
+    HasCUDASyntax:   true
+  - MainSourceFile:  'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\utility\utility.cu'
+    Digest:          0649e9188d92f0d19086d2312159503e
+    HasCUDASyntax:   true
+DpctVersion:     2025.3.0
+SDKVersionMajor: '12'
+SDKVersionMinor: '9'
+MainHelperFileName: ''
+USMLevel:        ''
+FeatureMap:      {}
+CompileTargets:  {}
+OptionMap:
+  AnalysisScopePath:
+    Value:           ''
+    ValueVec:
+      - 'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp'
+    Specified:       false
+  AsyncHandler:
+    Value:           'false'
+    Specified:       false
+  BuildScript:
+    Value:           '0'
+    Specified:       false
+  CodePinEnabled:
+    Value:           'false'
+    Specified:       false
+  CommentsEnabled:
+    Value:           'false'
+    Specified:       false
+  CompilationsDir:
+    Value:           ''
+    Specified:       false
+  CtadEnabled:
+    Value:           'false'
+    Specified:       false
+  EnablepProfiling:
+    Value:           'false'
+    Specified:       false
+  ExperimentalFlag:
+    Value:           '0'
+    Specified:       false
+  ExplicitNamespace:
+    Value:           '20'
+    Specified:       false
+  ExtensionDDFlag:
+    Value:           '0'
+    Specified:       false
+  ExtensionDEFlag:
+    Value:           '4294967295'
+    Specified:       false
+  HelperFuncPreferenceFlag:
+    Value:           '0'
+    Specified:       false
+  NDRangeDim:
+    Value:           '3'
+    Specified:       false
+  NoDRYPattern:
+    Value:           'false'
+    Specified:       false
+  OptimizeMigration:
+    Value:           'false'
+    Specified:       false
+  ProcessAll:
+    Value:           'true'
+    Specified:       true
+  RuleFile:
+    Value:           ''
+    Specified:       false
+  SyclNamedLambda:
+    Value:           'false'
+    Specified:       false
+  UseSYCLCompat:
+    Value:           'false'
+    Specified:       false
+  UsmLevel:
+    Value:           '1'
+    Specified:       false
+  VcxprojFile:
+    Value:           ''
+    Specified:       false
+...

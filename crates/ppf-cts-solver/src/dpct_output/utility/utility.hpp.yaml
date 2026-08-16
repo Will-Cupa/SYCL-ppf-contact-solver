@@ -1,0 +1,255 @@
+---
+MainSourceFile:  'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\dpct_output\utility\utility.hpp'
+Replacements:
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\utility\utility.hpp'
+    Offset:          176
+    Length:          0
+    ReplacementText: "#include <sycl/sycl.hpp>\r\n#include <dpct/dpct.hpp>\r\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\utility\utility.hpp'
+    Offset:          284
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\utility\utility.hpp'
+    Offset:          426
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\utility\utility.hpp'
+    Offset:          567
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\utility\utility.hpp'
+    Offset:          708
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\utility\utility.hpp'
+    Offset:          769
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\utility\utility.hpp'
+    Offset:          814
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\utility\utility.hpp'
+    Offset:          867
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\utility\utility.hpp'
+    Offset:          955
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\utility\utility.hpp'
+    Offset:          1907
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\utility\utility.hpp'
+    Offset:          2408
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\utility\utility.hpp'
+    Offset:          2792
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\utility\utility.hpp'
+    Offset:          2910
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\utility\utility.hpp'
+    Offset:          3028
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\utility\utility.hpp'
+    Offset:          3152
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\utility\utility.hpp'
+    Offset:          3280
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\utility\utility.hpp'
+    Offset:          3417
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\utility\utility.hpp'
+    Offset:          3554
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\utility\utility.hpp'
+    Offset:          3717
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+MainSourceFilesDigest:
+  - MainSourceFile:  ''
+    Digest:          ''
+    HasCUDASyntax:   false
+DpctVersion:     2025.3.0
+SDKVersionMajor: '12'
+SDKVersionMinor: '9'
+MainHelperFileName: ''
+USMLevel:        ''
+FeatureMap:      {}
+CompileTargets:  {}
+OptionMap:
+  AnalysisScopePath:
+    Value:           ''
+    ValueVec:
+      - 'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp'
+    Specified:       false
+  AsyncHandler:
+    Value:           'false'
+    Specified:       false
+  BuildScript:
+    Value:           '0'
+    Specified:       false
+  CodePinEnabled:
+    Value:           'false'
+    Specified:       false
+  CommentsEnabled:
+    Value:           'false'
+    Specified:       false
+  CompilationsDir:
+    Value:           ''
+    Specified:       false
+  CtadEnabled:
+    Value:           'false'
+    Specified:       false
+  EnablepProfiling:
+    Value:           'false'
+    Specified:       false
+  ExperimentalFlag:
+    Value:           '0'
+    Specified:       false
+  ExplicitNamespace:
+    Value:           '20'
+    Specified:       false
+  ExtensionDDFlag:
+    Value:           '0'
+    Specified:       false
+  ExtensionDEFlag:
+    Value:           '4294967295'
+    Specified:       false
+  HelperFuncPreferenceFlag:
+    Value:           '0'
+    Specified:       false
+  NDRangeDim:
+    Value:           '3'
+    Specified:       false
+  NoDRYPattern:
+    Value:           'false'
+    Specified:       false
+  OptimizeMigration:
+    Value:           'false'
+    Specified:       false
+  ProcessAll:
+    Value:           'true'
+    Specified:       true
+  RuleFile:
+    Value:           ''
+    Specified:       false
+  SyclNamedLambda:
+    Value:           'false'
+    Specified:       false
+  UseSYCLCompat:
+    Value:           'false'
+    Specified:       false
+  UsmLevel:
+    Value:           '1'
+    Specified:       false
+  VcxprojFile:
+    Value:           ''
+    Specified:       false
+...

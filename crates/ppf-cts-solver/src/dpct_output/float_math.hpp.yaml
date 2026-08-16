@@ -1,0 +1,255 @@
+---
+MainSourceFile:  'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\dpct_output\float_math.hpp'
+Replacements:
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\float_math.hpp'
+    Offset:          203
+    Length:          0
+    ReplacementText: "#include <sycl/sycl.hpp>\r\n#include <dpct/dpct.hpp>\r\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\float_math.hpp'
+    Offset:          2246
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\float_math.hpp'
+    Offset:          2257
+    Length:          9
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\float_math.hpp'
+    Offset:          2314
+    Length:          8
+    ReplacementText: 'sycl::fabs(x)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\float_math.hpp'
+    Offset:          2427
+    Length:          13
+    ReplacementText: DPCT_COMPATIBILITY_TEMP
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\float_math.hpp'
+    Offset:          2510
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\float_math.hpp'
+    Offset:          2521
+    Length:          9
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\float_math.hpp'
+    Offset:          2578
+    Length:          8
+    ReplacementText: 'sycl::fabs(x)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\float_math.hpp'
+    Offset:          2691
+    Length:          13
+    ReplacementText: DPCT_COMPATIBILITY_TEMP
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\float_math.hpp'
+    Offset:          3051
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\float_math.hpp'
+    Offset:          3062
+    Length:          9
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\float_math.hpp'
+    Offset:          3116
+    Length:          13
+    ReplacementText: DPCT_COMPATIBILITY_TEMP
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\float_math.hpp'
+    Offset:          3306
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\float_math.hpp'
+    Offset:          3317
+    Length:          9
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\float_math.hpp'
+    Offset:          3362
+    Length:          13
+    ReplacementText: DPCT_COMPATIBILITY_TEMP
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\float_math.hpp'
+    Offset:          3388
+    Length:          9
+    ReplacementText: 'sycl::native::exp(x)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\float_math.hpp'
+    Offset:          3445
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\float_math.hpp'
+    Offset:          3456
+    Length:          9
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp\float_math.hpp'
+    Offset:          3501
+    Length:          13
+    ReplacementText: DPCT_COMPATIBILITY_TEMP
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+MainSourceFilesDigest:
+  - MainSourceFile:  ''
+    Digest:          ''
+    HasCUDASyntax:   false
+DpctVersion:     2025.3.0
+SDKVersionMajor: '12'
+SDKVersionMinor: '9'
+MainHelperFileName: ''
+USMLevel:        ''
+FeatureMap:      {}
+CompileTargets:  {}
+OptionMap:
+  AnalysisScopePath:
+    Value:           ''
+    ValueVec:
+      - 'D:\GitProjects\SYCL-ppf-contact-solver\crates\ppf-cts-solver\src\cpp'
+    Specified:       false
+  AsyncHandler:
+    Value:           'false'
+    Specified:       false
+  BuildScript:
+    Value:           '0'
+    Specified:       false
+  CodePinEnabled:
+    Value:           'false'
+    Specified:       false
+  CommentsEnabled:
+    Value:           'false'
+    Specified:       false
+  CompilationsDir:
+    Value:           ''
+    Specified:       false
+  CtadEnabled:
+    Value:           'false'
+    Specified:       false
+  EnablepProfiling:
+    Value:           'false'
+    Specified:       false
+  ExperimentalFlag:
+    Value:           '0'
+    Specified:       false
+  ExplicitNamespace:
+    Value:           '20'
+    Specified:       false
+  ExtensionDDFlag:
+    Value:           '0'
+    Specified:       false
+  ExtensionDEFlag:
+    Value:           '4294967295'
+    Specified:       false
+  HelperFuncPreferenceFlag:
+    Value:           '0'
+    Specified:       false
+  NDRangeDim:
+    Value:           '3'
+    Specified:       false
+  NoDRYPattern:
+    Value:           'false'
+    Specified:       false
+  OptimizeMigration:
+    Value:           'false'
+    Specified:       false
+  ProcessAll:
+    Value:           'true'
+    Specified:       true
+  RuleFile:
+    Value:           ''
+    Specified:       false
+  SyclNamedLambda:
+    Value:           'false'
+    Specified:       false
+  UseSYCLCompat:
+    Value:           'false'
+    Specified:       false
+  UsmLevel:
+    Value:           '1'
+    Specified:       false
+  VcxprojFile:
+    Value:           ''
+    Specified:       false
+...
