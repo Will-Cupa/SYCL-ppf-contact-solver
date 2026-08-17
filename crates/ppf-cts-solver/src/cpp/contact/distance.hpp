@@ -6,13 +6,15 @@
 #ifndef DISTANCE_HPP
 #define DISTANCE_HPP
 
+#include <sycl/sycl.hpp>
+#include <dpct/dpct.hpp>
 #include "../common.hpp"
 #include "../data.hpp"
 
 namespace distance {
 
 template <class T, class Y>
-__device__ Vec2<Y> point_edge_distance_coeff(const Vec3<T> &p,
+Vec2<Y> point_edge_distance_coeff(const Vec3<T> &p,
                                              const Vec3<T> &e0,
                                              const Vec3<T> &e1) {
     Vec3<Y> r = (e1 - e0).template cast<Y>();
@@ -44,7 +46,7 @@ __device__ Vec2<Y> point_edge_distance_coeff(const Vec3<T> &p,
 // lies inside, and on a sliver the Gram form can put that verdict on the wrong
 // side of the comparison.
 template <class T, class Y>
-__device__ Vec3<Y>
+Vec3<Y>
 point_triangle_distance_coeff(const Vec3<T> &p, const Vec3<T> &t0,
                               const Vec3<T> &t1, const Vec3<T> &t2) {
     Vec3<Y> r0 = (t1 - t0).template cast<Y>();
@@ -84,7 +86,7 @@ point_triangle_distance_coeff(const Vec3<T> &p, const Vec3<T> &t0,
 // and 1, which is what lets a caller read a coefficient of exactly 0 or 1 as
 // "the closest point is an endpoint". A value that is not a number leaves as
 // zero, so a returned coefficient can never name a point off its segment.
-template <class Y> __device__ Y clamp_unit(Y v) {
+template <class Y> Y clamp_unit(Y v) {
     return v > Y(0) ? (v < Y(1) ? v : Y(1)) : Y(0);
 }
 
@@ -110,7 +112,7 @@ template <class Y> __device__ Y clamp_unit(Y v) {
 // endpoint of its own segment, so the four boundary candidates are exact
 // there.
 template <class T, class Y>
-__device__ Vec4<Y>
+Vec4<Y>
 edge_edge_distance_coeff(const Vec3<T> &ea0, const Vec3<T> &ea1,
                          const Vec3<T> &eb0, const Vec3<T> &eb1) {
     // Every quantity below is built from pairwise endpoint differences taken
@@ -221,7 +223,7 @@ edge_edge_distance_coeff(const Vec3<T> &ea0, const Vec3<T> &ea1,
 // worst case governed by the widest interior angle, so a sliver triangle turns
 // a small mistake into a step that skips the collision entirely.
 template <class T, class Y>
-__device__ Vec3<Y> point_triangle_distance_coeff_unclassified(
+Vec3<Y> point_triangle_distance_coeff_unclassified(
     const Vec3<T> &p, const Vec3<T> &t0, const Vec3<T> &t1, const Vec3<T> &t2) {
 
     // Differences are taken in T and cast to Y afterwards, never a cast of an
@@ -283,7 +285,7 @@ __device__ Vec3<Y> point_triangle_distance_coeff_unclassified(
 }
 
 template <class T, class Y>
-__device__ Vec2<Y> point_edge_distance_coeff_unclassified(const Vec3<T> &p,
+Vec2<Y> point_edge_distance_coeff_unclassified(const Vec3<T> &p,
                                                           const Vec3<T> &e0,
                                                           const Vec3<T> &e1) {
     Vec2<Y> c = point_edge_distance_coeff<T, Y>(p, e0, e1);

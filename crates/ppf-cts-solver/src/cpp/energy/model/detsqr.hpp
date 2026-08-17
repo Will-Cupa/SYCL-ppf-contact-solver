@@ -6,12 +6,14 @@
 #ifndef DETSQR_HPP
 #define DETSQR_HPP
 
+#include <sycl/sycl.hpp>
+#include <dpct/dpct.hpp>
 #include "../../common.hpp"
 #include "../../data.hpp"
 
 namespace detsqr {
 
-__device__ float sqr(float x) { return x * x; }
+float sqr(float x) { return x * x; }
 
 // Volume term: 0.5 * lambda * (J - 1)^2 with J the Jacobian, i.e. the PRODUCT of
 // the principal stretches. The two functions below and the diff tables that
@@ -24,17 +26,17 @@ __device__ float sqr(float x) { return x * x; }
 // solver drives Newton from the tables and never calls these, so nothing was
 // mis-simulated, but the mismatch would have silently poisoned the first
 // consumer to evaluate the energy itself, such as an energy-based line search.
-__device__ float energy(const Vec2f &a, float lmd) {
+float energy(const Vec2f &a, float lmd) {
     float J = a[0] * a[1];
     return lmd * 0.5f * sqr(J - 1.0f);
 }
 
-__device__ float energy(const Vec3f &a, float lmd) {
+float energy(const Vec3f &a, float lmd) {
     float J = a[0] * a[1] * a[2];
     return lmd * 0.5f * sqr(J - 1.0f);
 }
 
-__device__ DiffTable2 make_diff_table2(const Vec2f &a, float lmd) {
+DiffTable2 make_diff_table2(const Vec2f &a, float lmd) {
     DiffTable2 table;
     float J = a[0] * a[1];
     table.deda[0] = lmd * a[1] * (J - 1.0f);
@@ -46,7 +48,7 @@ __device__ DiffTable2 make_diff_table2(const Vec2f &a, float lmd) {
     return table;
 }
 
-__device__ DiffTable3 make_diff_table3(const Vec3f &a, float lmd) {
+DiffTable3 make_diff_table3(const Vec3f &a, float lmd) {
     DiffTable3 table;
     float J = a[0] * a[1] * a[2];
     table.deda[0] = lmd * a[1] * a[2] * (J - 1.0f);

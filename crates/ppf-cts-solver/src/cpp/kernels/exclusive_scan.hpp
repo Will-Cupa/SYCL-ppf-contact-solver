@@ -6,18 +6,20 @@
 #ifndef EXCLUSIVE_SCAN_HPP
 #define EXCLUSIVE_SCAN_HPP
 
+#include <sycl/sycl.hpp>
+#include <dpct/dpct.hpp>
 #include "../main/cuda_utils.hpp"
 
 namespace kernels {
 
-__global__ void block_scan_kernel(unsigned *d_data, unsigned *d_block_sums,
+void block_scan_kernel(unsigned *d_data, unsigned *d_block_sums,
                                   unsigned n);
 
-__global__ void add_group_offsets_kernel(unsigned *data, unsigned n,
+void add_group_offsets_kernel(unsigned *data, unsigned n,
                                          const unsigned *parent,
                                          unsigned parent_n);
 
-__global__ void add_block_base_offsets_kernel(unsigned *d_data,
+void add_block_base_offsets_kernel(unsigned *d_data,
                                               const unsigned *d_block_excl,
                                               unsigned n);
 

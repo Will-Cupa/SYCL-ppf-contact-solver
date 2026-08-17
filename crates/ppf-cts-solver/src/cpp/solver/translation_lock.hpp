@@ -3,6 +3,8 @@
 #ifndef TRANSLATION_LOCK_HPP
 #define TRANSLATION_LOCK_HPP
 
+#include <sycl/sycl.hpp>
+#include <dpct/dpct.hpp>
 #include "../buffer/buffer.hpp"
 #include "../data.hpp"
 #include "../main/cuda_utils.hpp"
@@ -55,17 +57,17 @@ struct LockFrame {
     unsigned row_mask;
 };
 
-__host__ __device__ inline bool axis_enabled(const Vec3f &axis) {
+inline bool axis_enabled(const Vec3f &axis) {
     return axis[0] != 0.0f || axis[1] != 0.0f || axis[2] != 0.0f;
 }
 
-__host__ __device__ inline bool rotation_mode_valid(unsigned mode) {
+inline bool rotation_mode_valid(unsigned mode) {
     return mode == ROTATION_LOCK_ALLOW_ONLY ||
            mode == ROTATION_LOCK_PROHIBIT_AXIS;
 }
 
 // A deterministic orthonormal tangent basis for a normalized axis.
-__host__ __device__ inline void tangent_basis(const Vec3f &axis, Vec3f &b0,
+inline void tangent_basis(const Vec3f &axis, Vec3f &b0,
                                               Vec3f &b1) {
     const Vec3f reference =
         fabsf(axis[2]) < 0.9f ? Vec3f(0.0f, 0.0f, 1.0f)
@@ -76,14 +78,14 @@ __host__ __device__ inline void tangent_basis(const Vec3f &axis, Vec3f &b0,
     b1.normalize();
 }
 
-__device__ inline void atomic_add_vec3(Vec3f *dst, unsigned index,
+inline void atomic_add_vec3(Vec3f *dst, unsigned index,
                                        const Vec3f &v) {
     atomicAdd(&dst[index][0], v[0]);
     atomicAdd(&dst[index][1], v[1]);
     atomicAdd(&dst[index][2], v[2]);
 }
 
-__device__ inline void atomic_add_vec4(Vec4f *dst, unsigned index,
+inline void atomic_add_vec4(Vec4f *dst, unsigned index,
                                        const Vec4f &v) {
     atomicAdd(&dst[index][0], v[0]);
     atomicAdd(&dst[index][1], v[1]);
@@ -91,19 +93,19 @@ __device__ inline void atomic_add_vec4(Vec4f *dst, unsigned index,
     atomicAdd(&dst[index][3], v[3]);
 }
 
-__device__ inline Vec3f matvec3(const Mat3x3f &m, const Vec3f &v) {
+inline Vec3f matvec3(const Mat3x3f &m, const Vec3f &v) {
     return Vec3f(m(0, 0) * v[0] + m(0, 1) * v[1] + m(0, 2) * v[2],
                  m(1, 0) * v[0] + m(1, 1) * v[1] + m(1, 2) * v[2],
                  m(2, 0) * v[0] + m(2, 1) * v[1] + m(2, 2) * v[2]);
 }
 
-__host__ inline Vec3f host_matvec3(const Mat3x3f &m, const Vec3f &v) {
+inline Vec3f host_matvec3(const Mat3x3f &m, const Vec3f &v) {
     return Vec3f(m(0, 0) * v[0] + m(0, 1) * v[1] + m(0, 2) * v[2],
                  m(1, 0) * v[0] + m(1, 1) * v[1] + m(1, 2) * v[2],
                  m(2, 0) * v[0] + m(2, 1) * v[1] + m(2, 2) * v[2]);
 }
 
-__device__ inline Vec4f matvec4(const Mat4x4f &m, const Vec4f &v) {
+inline Vec4f matvec4(const Mat4x4f &m, const Vec4f &v) {
     Vec4f out = Vec4f::Zero();
 #pragma unroll
     for (unsigned row = 0; row < 4; ++row) {
@@ -115,7 +117,7 @@ __device__ inline Vec4f matvec4(const Mat4x4f &m, const Vec4f &v) {
     return out;
 }
 
-__host__ inline Vec4f host_matvec4(const Mat4x4f &m, const Vec4f &v) {
+inline Vec4f host_matvec4(const Mat4x4f &m, const Vec4f &v) {
     Vec4f out = Vec4f::Zero();
     for (unsigned row = 0; row < 4; ++row)
         for (unsigned col = 0; col < 4; ++col)
@@ -130,7 +132,7 @@ struct RowCoefficients {
     Vec3f row[4];
 };
 
-__device__ inline RowCoefficients
+inline RowCoefficients
 row_coefficients(const TranslationLock &lock, const LockFrame &frame,
                  const Vec3f &position, float mass) {
     RowCoefficients out{};
@@ -159,7 +161,7 @@ row_coefficients(const TranslationLock &lock, const LockFrame &frame,
     return out;
 }
 
-__device__ inline Vec3f rows_transpose_times(const RowCoefficients &c,
+inline Vec3f rows_transpose_times(const RowCoefficients &c,
                                               const Vec4f &lambda) {
     Vec3f out = Vec3f::Zero();
 #pragma unroll
@@ -169,7 +171,7 @@ __device__ inline Vec3f rows_transpose_times(const RowCoefficients &c,
     return out;
 }
 
-__device__ inline Vec4f rows_times_vector(const RowCoefficients &c,
+inline Vec4f rows_times_vector(const RowCoefficients &c,
                                            const Vec3f &v) {
     Vec4f out = Vec4f::Zero();
 #pragma unroll
@@ -411,7 +413,7 @@ class FullProjector {
         const Vec<unsigned> mask = dof_mask_;
         const Vec<LockFrame> frames = frames_;
         DISPATCH_START(q.size / 3u)
-        [data, mask, positions, frames, seed, q] __device__(unsigned i) mutable {
+        [data, mask, positions, frames, seed, q] (unsigned i) mutable {
             if (mask.data[i] != 0u) {
                 q.data[3 * i + 0] = seed.data[3 * i + 0];
                 q.data[3 * i + 1] = seed.data[3 * i + 1];
@@ -449,7 +451,7 @@ class FullProjector {
             const Vec<Vec4f> sums = sums_;
             DISPATCH_START(q.size / 3u)
             [data, mask, positions, frames, sums,
-             q] __device__(unsigned i) mutable {
+             q] (unsigned i) mutable {
                 if (mask.data[i] != 0u) {
                     return;
                 }
@@ -469,7 +471,7 @@ class FullProjector {
             DISPATCH_END;
             DISPATCH_START(q.size / 3u)
             [data, mask, positions, frames, sums,
-             q] __device__(unsigned i) mutable {
+             q] (unsigned i) mutable {
                 if (mask.data[i] != 0u) {
                     return;
                 }
@@ -520,7 +522,7 @@ class FullProjector {
             sums_.clear(Vec4f::Zero());
             DISPATCH_START(v.size / 3u)
             [data, mask, positions, frames, sums,
-             v] __device__(unsigned i) mutable {
+             v] (unsigned i) mutable {
                 if (mask.data[i] != 0u) {
                     return;
                 }
@@ -543,7 +545,7 @@ class FullProjector {
 
             DISPATCH_START(v.size / 3u)
             [data, mask, positions, frames, sums,
-             v] __device__(unsigned i) mutable {
+             v] (unsigned i) mutable {
                 if (mask.data[i] != 0u) {
                     v.data[3 * i + 0] = 0.0f;
                     v.data[3 * i + 1] = 0.0f;
@@ -595,7 +597,7 @@ class FullProjector {
         const Vec<LockFrame> frames = frames_;
         const Vec<Vec3f> torque = torque_;
         DISPATCH_START(positions.size)
-        [data, positions, frames, torque, dx] __device__(unsigned i) mutable {
+        [data, positions, frames, torque, dx] (unsigned i) mutable {
             const unsigned li = data.translation_lock_index.data[i];
             if (li == UNSET) {
                 return;
@@ -649,7 +651,7 @@ class FullProjector {
                             fabsf(frames_host[li].inv_inertia(2, 2))));
             const float bound =
                 4096.0f * eps *
-                fmaxf(1.0f, omega_scale + torque_scale * inverse_scale);
+                sycl::fmax(1.0f, omega_scale + torque_scale * inverse_scale);
             if (!std::isfinite(magnitude) || magnitude > bound) {
                 std::vector<Vec3f> positions_host(positions.size);
                 std::vector<float> dx_host(dx.size);
@@ -790,7 +792,7 @@ class FullProjector {
         inertia.clear(Mat3x3f::Zero());
         const DataSet data = data_;
         DISPATCH_START(positions.size)
-        [data, positions, com] __device__(unsigned i) mutable {
+        [data, positions, com] (unsigned i) mutable {
             const unsigned li = data.translation_lock_index.data[i];
             if (li == UNSET) {
                 return;
@@ -807,7 +809,7 @@ class FullProjector {
         DISPATCH_END;
         const Vec<LockFrame> frames = frames_;
         DISPATCH_START(nl)
-        [data, com, frames] __device__(unsigned li) mutable {
+        [data, com, frames] (unsigned li) mutable {
             if (!axis_enabled(data.translation_lock.data[li].rotation_axis)) {
                 return;
             }
@@ -816,7 +818,7 @@ class FullProjector {
         }
         DISPATCH_END;
         DISPATCH_START(positions.size)
-        [data, positions, frames, inertia] __device__(unsigned i) mutable {
+        [data, positions, frames, inertia] (unsigned i) mutable {
             const unsigned li = data.translation_lock_index.data[i];
             if (li == UNSET) {
                 return;
@@ -871,14 +873,14 @@ class FullProjector {
         const Vec<Mat4x4f> gram = gram_;
         const Vec<Vec3f> drift = drift_;
         DISPATCH_START(nl)
-        [frames] __device__(unsigned li) mutable {
+        [frames] (unsigned li) mutable {
             frames.data[li].fixed = Vec4f::Zero();
             frames.data[li].rhs = Vec4f::Zero();
         }
         DISPATCH_END;
         DISPATCH_START(positions.size)
         [data, mask, positions, seed, frames, gram,
-         drift] __device__(unsigned i) mutable {
+         drift] (unsigned i) mutable {
             const unsigned li = data.translation_lock_index.data[i];
             if (li == UNSET) {
                 return;
@@ -991,7 +993,7 @@ inline void check_invariant(const DataSet &data, const Vec<Vec3f> &positions,
     sums.clear(Vec3f::Zero());
     max_disp.clear(0.0f);
     DISPATCH_START(positions.size)
-    [data, positions, sums, max_disp] __device__(unsigned i) mutable {
+    [data, positions, sums, max_disp] (unsigned i) mutable {
         const unsigned li = data.translation_lock_index.data[i];
         if (li == UNSET) {
             return;

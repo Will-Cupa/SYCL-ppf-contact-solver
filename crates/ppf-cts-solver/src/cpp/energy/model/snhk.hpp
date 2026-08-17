@@ -6,12 +6,14 @@
 #ifndef SNHK_HPP
 #define SNHK_HPP
 
+#include <sycl/sycl.hpp>
+#include <dpct/dpct.hpp>
 #include "../../common.hpp"
 #include "../../data.hpp"
 
 namespace SNHk {
 
-__device__ float energy(const Vec3f &S, float mu, float lmd) {
+float energy(const Vec3f &S, float mu, float lmd) {
     float a = S[0];
     float b = S[1];
     float c = S[2];
@@ -21,7 +23,7 @@ __device__ float energy(const Vec3f &S, float mu, float lmd) {
            0.5f * lmd * (I3 - 1.0f) * (I3 - 1.0f);
 }
 
-__device__ DiffTable3 make_diff_table3(const Vec3f &S, float mu, float lmd) {
+DiffTable3 make_diff_table3(const Vec3f &S, float mu, float lmd) {
     DiffTable3 table;
     float a = S[0];
     float b = S[1];
@@ -42,7 +44,7 @@ __device__ DiffTable3 make_diff_table3(const Vec3f &S, float mu, float lmd) {
     return table;
 }
 
-__device__ DiffTable2 make_diff_table2(const Vec2f &S, float mu, float lmd) {
+DiffTable2 make_diff_table2(const Vec2f &S, float mu, float lmd) {
     DiffTable2 table;
     float a = S[0];
     float b = S[1];

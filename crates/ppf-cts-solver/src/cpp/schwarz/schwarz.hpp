@@ -6,6 +6,8 @@
 #ifndef SCHWARZ_HPP
 #define SCHWARZ_HPP
 
+#include <sycl/sycl.hpp>
+#include <dpct/dpct.hpp>
 #include "../csrmat/csrmat.hpp"
 #include "../data.hpp"
 #include "../main/cuda_utils.hpp" // cudaStream_t
@@ -80,7 +82,7 @@ void build(SchwarzHierarchy &H, const DynCSRMat &A, const FixedCSRMat &B,
 // the preconditioner chains without a host sync and the iteration is graph-
 // capturable.
 void apply(const SchwarzHierarchy &H, const Vec<float> &x, Vec<float> &result,
-           cudaStream_t stream = 0);
+           dpct::queue_ptr stream = 0);
 
 // No-op: all buffers are owned by the persistent cache.
 void free(SchwarzHierarchy &H);

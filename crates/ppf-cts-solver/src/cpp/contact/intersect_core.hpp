@@ -1,3 +1,5 @@
+#include <sycl/sycl.hpp>
+#include <dpct/dpct.hpp>
 // File: intersect_core.hpp
 // Code: Claude Code
 // Review: Ryoichi Ando (ryoichi.ando@zozo.com)
@@ -19,8 +21,8 @@
 #ifndef PPF_CTS_INTERSECT_CORE_HPP
 #define PPF_CTS_INTERSECT_CORE_HPP
 
-#if defined(__CUDACC__)
-#define PPF_ISECT_HD __host__ __device__
+#if defined(SYCL_LANGUAGE_VERSION)
+#define PPF_ISECT_HD 
 #else
 #define PPF_ISECT_HD
 #endif

@@ -12,13 +12,15 @@
 #ifndef PDRD_POLAR_HPP
 #define PDRD_POLAR_HPP
 
+#include <sycl/sycl.hpp>
+#include <dpct/dpct.hpp>
 #include <cmath>
 #include "../../float_math.hpp"
 
 // Host/device portability: nvcc compiles these for both host and device; a plain
 // host compiler (the unit test) sees no annotation.
-#ifdef __CUDACC__
-#define PDRD_POLAR_HD __device__ __host__
+#ifdef SYCL_LANGUAGE_VERSION
+#define PDRD_POLAR_HD 
 #else
 #define PDRD_POLAR_HD
 #endif

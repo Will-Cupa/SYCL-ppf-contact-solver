@@ -17,6 +17,8 @@
 #ifndef PPF_LINALG_SMAT_HPP
 #define PPF_LINALG_SMAT_HPP
 
+#include <sycl/sycl.hpp>
+#include <dpct/dpct.hpp>
 #include <cmath>
 #include <initializer_list>
 #include <type_traits>
@@ -28,7 +30,7 @@
 #define __device__
 #endif
 
-#define LA_HD __host__ __device__
+#define LA_HD 
 
 namespace linalg {
 
@@ -39,7 +41,7 @@ namespace linalg {
 // undefined on those scalar types. The non-template float overloads are an
 // exact match and win over the templates.
 static LA_HD inline float la_sqrt(float x) { return sqrtf(x); }
-static LA_HD inline float la_abs(float x) { return fabsf(x); }
+static LA_HD inline float la_abs(float x) { return sycl::fabs(x); }
 template <class T> static LA_HD T la_sqrt(const T &x) {
     return static_cast<T>(sqrtf(static_cast<float>(x)));
 }

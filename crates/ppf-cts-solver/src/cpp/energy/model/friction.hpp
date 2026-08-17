@@ -6,6 +6,8 @@
 #ifndef FRICTION_HPP
 #define FRICTION_HPP
 
+#include <sycl/sycl.hpp>
+#include <dpct/dpct.hpp>
 #include "../../common.hpp"
 #include "../../data.hpp"
 
@@ -25,7 +27,7 @@ struct Friction {
     bool kinetic;
     Vec3f slip_dir;
     Vec3f n;
-    __device__ Friction(const Vec3f &force_contact, const Vec3f &dx,
+    Friction(const Vec3f &force_contact, const Vec3f &dx,
                         const Vec3f &normal, float mu, float min_dx)
         : mu(mu), n(normal) {
         contact = -normal.dot(force_contact);
@@ -41,12 +43,12 @@ struct Friction {
         if (mu > 0.0f) {
             // One expression covers both branches: a spring below min_dx,
             // saturating at mu * contact above it.
-            lambda = mu * contact / fmaxf(min_dx, u_norm);
+            lambda = mu * contact / sycl::fmax(min_dx, u_norm);
         } else {
             lambda = 0.0f;
         }
     }
-    __device__ Vec3f gradient() const { return lambda * u; }
+    Vec3f gradient() const { return lambda * u; }
     // The static branch is a tangential spring, so its Hessian is lambda * P.
     // In the kinetic branch the capped potential mu * contact * |u| is linear
     // along the slip direction s and curved only across it. Its exact Hessian
@@ -67,14 +69,14 @@ struct Friction {
     //
     // Both branches are symmetric PSD, with eigenvalues
     // {0, lambda, lambda} and {0, 0, lambda}, respectively.
-    __device__ Mat3x3f hessian() const {
+    Mat3x3f hessian() const {
         if (kinetic) {
             Vec3f w = n.cross(slip_dir);
             return lambda * (w * w.transpose());
         }
         return lambda * P;
     }
-    __device__ Mat3x3f get_projection(const Vec3f &normal) {
+    Mat3x3f get_projection(const Vec3f &normal) {
         return Mat3x3f::Identity() - normal * normal.transpose();
     }
 };

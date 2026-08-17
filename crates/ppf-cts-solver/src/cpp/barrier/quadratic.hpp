@@ -6,11 +6,13 @@
 #ifndef QUADRATIC_HPP
 #define QUADRATIC_HPP
 
+#include <sycl/sycl.hpp>
+#include <dpct/dpct.hpp>
 #include "../data.hpp"
 
 namespace quadratic {
 
-__device__ static float energy(float g, float ghat, float offset) {
+static float energy(float g, float ghat, float offset) {
     g -= offset;
     float y = ghat - g;
     if (y > 0.0f) {
@@ -20,7 +22,7 @@ __device__ static float energy(float g, float ghat, float offset) {
     }
 }
 
-__device__ static float gradient(float g, float ghat, float offset) {
+static float gradient(float g, float ghat, float offset) {
     g -= offset;
     float y = ghat - g;
     if (y > 0.0f) {
@@ -30,7 +32,7 @@ __device__ static float gradient(float g, float ghat, float offset) {
     }
 }
 
-__device__ static float curvature(float g, float ghat, float offset) {
+static float curvature(float g, float ghat, float offset) {
     g -= offset;
     if (ghat - g > 0.0f) {
         return 2.0f;

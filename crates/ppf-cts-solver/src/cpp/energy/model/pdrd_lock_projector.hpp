@@ -3,6 +3,8 @@
 #ifndef PDRD_LOCK_PROJECTOR_HPP
 #define PDRD_LOCK_PROJECTOR_HPP
 
+#include <sycl/sycl.hpp>
+#include <dpct/dpct.hpp>
 #include "../../data.hpp"
 
 #include <cassert>
@@ -19,7 +21,7 @@ constexpr unsigned RIGID_UNSET = 0xffffffffu;
 // The caller validates all lock axes before they reach CUDA; the fallback assert
 // makes a malformed joint axis fail at the first use rather than silently
 // weakening a rigid constraint.
-__device__ inline void pdrd_tangent_basis(const Vec3f &axis, Vec3f &b0,
+inline void pdrd_tangent_basis(const Vec3f &axis, Vec3f &b0,
                                           Vec3f &b1) {
     const float n2 = axis.dot(axis);
     assert(isfinite(n2) && n2 > 0.0f);
@@ -37,7 +39,7 @@ __device__ inline void pdrd_tangent_basis(const Vec3f &axis, Vec3f &b0,
 // Append one row after modified Gram-Schmidt. All source rows have unit scale,
 // so this threshold only drops algebraically duplicate constraints. It does not
 // relax a lock: removing a duplicate leaves the same null space.
-__device__ inline void pdrd_append_constraint(float basis[6][6],
+inline void pdrd_append_constraint(float basis[6][6],
                                               unsigned &count,
                                               const float source[6]) {
     float row[6];
@@ -58,7 +60,7 @@ __device__ inline void pdrd_append_constraint(float basis[6][6],
 
 // Add the two forbidden components in either the translation (offset 0) or
 // rotation (offset 3) block of a reduced body vector.
-__device__ inline void pdrd_append_axis_lock(float basis[6][6], unsigned &count,
+inline void pdrd_append_axis_lock(float basis[6][6], unsigned &count,
                                              const Vec3f &axis,
                                              unsigned offset) {
     Vec3f b0, b1;
@@ -75,7 +77,7 @@ __device__ inline void pdrd_append_axis_lock(float basis[6][6], unsigned &count,
 
 // Rotation Lock has two distinct null spaces. Allow-only removes the two
 // tangent directions, while prohibit-axis removes only the selected axis.
-__device__ inline void pdrd_append_rotation_lock(float basis[6][6],
+inline void pdrd_append_rotation_lock(float basis[6][6],
                                                   unsigned &count,
                                                   const Vec3f &axis,
                                                   unsigned mode) {
@@ -97,7 +99,7 @@ __device__ inline void pdrd_append_rotation_lock(float basis[6][6],
 // Hinge, translation-lock, and rotation-lock rows are orthonormalized together,
 // so overlapping rotation restrictions are intersected exactly rather than
 // applying noncommuting projectors in sequence.
-static __global__ void project_body_dofs_kernel(unsigned nb, unsigned body_base,
+static void project_body_dofs_kernel(unsigned nb, unsigned body_base,
                                                 Vec<unsigned> jmode,
                                                 Vec<Vec3f> jaxis,
                                                 Vec<unsigned> tlock,
@@ -106,6 +108,7 @@ static __global__ void project_body_dofs_kernel(unsigned nb, unsigned body_base,
                                                 Vec<Vec3f> rlock_axis,
                                                 Vec<unsigned> rlock_mode,
                                                 Vec<float> u) {
+    auto item_ct1 = sycl::ext::oneapi::this_work_item::get_nd_item<3>();
     unsigned b = blockIdx.x * blockDim.x + threadIdx.x;
     if (b >= nb) return;
     float *q = u.data + body_base + 6u * b;

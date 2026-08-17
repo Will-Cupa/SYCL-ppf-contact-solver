@@ -15,8 +15,11 @@
 #ifndef PPF_LINALG_EIGSOLVE_HPP
 #define PPF_LINALG_EIGSOLVE_HPP
 
+#include <sycl/sycl.hpp>
+#include <dpct/dpct.hpp>
 #include "smat.hpp"
 #include "../float_math.hpp"
+#include <cmath>
 
 #ifndef __host__
 #define __host__
@@ -25,7 +28,7 @@
 #define __device__
 #endif
 
-#define LA_HD __host__ __device__
+#define LA_HD 
 
 namespace linalg {
 namespace eig {
@@ -100,7 +103,7 @@ static LA_HD V3 eigvalues3(const M3 &A) {
     float p2 = (A(0, 0) - q) * (A(0, 0) - q) + (A(1, 1) - q) * (A(1, 1) - q) +
                (A(2, 2) - q) * (A(2, 2) - q) + 2.0f * p1;
     float p = sqrtf(p2 / 6.0f);
-    if (fabsf(p) < 1e-8f) {
+    if (sycl::fabs(p) < 1e-8f) {
         return V3(0.0f, 0.0f, 0.0f);
     }
     M3 B = (1.0f / p) * (A - q * M3::Identity());
@@ -266,14 +269,14 @@ template <int N> static LA_HD void psd_project_symmetric(SMat<float, N, N> &A,
         for (int p = 0; p < N; ++p) {
             for (int q = p + 1; q < N; ++q) {
                 const float apq = A(p, q);
-                if (fabsf(apq) <= tiny)
+                if (sycl::fabs(apq) <= tiny)
                     continue;
                 const float app = A(p, p);
                 const float aqq = A(q, q);
                 // Jacobi rotation angle that zeroes A(p, q).
                 const float tau = (aqq - app) / (2.0f * apq);
                 const float t = (tau >= 0.0f ? 1.0f : -1.0f) /
-                                (fabsf(tau) + sqrtf(1.0f + tau * tau));
+                                (sycl::fabs(tau) + sqrtf(1.0f + tau * tau));
                 const float c = 1.0f / sqrtf(1.0f + t * t);
                 const float s = t * c;
                 A(p, p) = c * c * app - 2.0f * s * c * apq + s * s * aqq;

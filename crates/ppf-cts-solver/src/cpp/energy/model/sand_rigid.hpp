@@ -62,6 +62,8 @@
 #ifndef SAND_RIGID_HPP
 #define SAND_RIGID_HPP
 
+#include <sycl/sycl.hpp>
+#include <dpct/dpct.hpp>
 #include "../../data.hpp"
 #include "../../utility/dispatcher.hpp"
 #include "rigid_core.hpp"
@@ -75,7 +77,7 @@ inline void launch_integrate_grains(const DataSet &data, float dt, float c_roll,
                                     float roll_resist) {
     unsigned n = data.surface_vert_count;
     DISPATCH_START(n)
-    [data, dt, c_roll, roll_resist] __device__(unsigned i) mutable {
+    [data, dt, c_roll, roll_resist] (unsigned i) mutable {
         float iinv = data.grain_inv_inertia[i];
         if (iinv <= 0.0f) {
             return; // not a grain
@@ -114,7 +116,8 @@ inline void launch_integrate_grains(const DataSet &data, float dt, float c_roll,
         float nn = nsum.squaredNorm();
         Vec3f vt = step;
         if (nn > 0.0f) {
-            Vec3f n = nsum * (1.0f / sqrtf(nn)); // normalized contact direction
+            Vec3f n =
+                nsum * (1.0f / sycl::sqrt(nn)); // normalized contact direction
             vt = step - n.dot(step) * n; // tangential center step
         }
         // nn == 0 means the grain touched nothing this step, so tau == 0 and
@@ -175,7 +178,7 @@ inline void launch_condense_grains(const DataSet &data, Vec<Mat3x3f> diag_hess,
                                    float spin_couple) {
     unsigned n = data.surface_vert_count;
     DISPATCH_START(n)
-    [data, diag_hess, force, dt, spin_couple] __device__(unsigned i) mutable {
+    [data, diag_hess, force, dt, spin_couple] (unsigned i) mutable {
         float iinv_c = data.grain_inv_inertia_center[i];
         if (iinv_c <= 0.0f) {
             return; // not a grain
@@ -213,7 +216,7 @@ inline void launch_condense_grains(const DataSet &data, Vec<Mat3x3f> diag_hess,
 inline void launch_recover_grains(const DataSet &data, Vec<float> dx, float dt) {
     unsigned n = data.surface_vert_count;
     DISPATCH_START(n)
-    [data, dx, dt] __device__(unsigned i) mutable {
+    [data, dx, dt] (unsigned i) mutable {
         float iinv_c = data.grain_inv_inertia_center[i];
         if (iinv_c <= 0.0f) {
             return; // not a grain

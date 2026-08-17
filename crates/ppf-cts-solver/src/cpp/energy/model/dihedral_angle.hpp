@@ -6,17 +6,20 @@
 #ifndef DIHEDRAL_ANGLE_HPP
 #define DIHEDRAL_ANGLE_HPP
 
+#include <sycl/sycl.hpp>
+#include <dpct/dpct.hpp>
 #include "../../common.hpp"
 #include "../../data.hpp"
 #include "../../linalg/eigsolve.hpp"
+#include <cmath>
 
 namespace dihedral_angle {
 
-__device__ static Vec4u remap(Vec4u hinge) {
+static Vec4u remap(Vec4u hinge) {
     return Vec4u(hinge[2], hinge[1], hinge[0], hinge[3]);
 }
 
-__device__ static Mat3x4f face_dihedral_angle_grad(const Vec3f &v2,
+static Mat3x4f face_dihedral_angle_grad(const Vec3f &v2,
                                                    const Vec3f &v0,
                                                    const Vec3f &v1,
                                                    const Vec3f &v3) {
@@ -51,7 +54,7 @@ __device__ static Mat3x4f face_dihedral_angle_grad(const Vec3f &v2,
 // independent of where that element sits in the domain. Degenerate
 // configurations return zero instead of asserting, since the FD probes can
 // brush against them.
-__device__ static Mat3x4f face_dihedral_angle_grad_f(const Vec3f &v2,
+static Mat3x4f face_dihedral_angle_grad_f(const Vec3f &v2,
                                                      const Vec3f &v0,
                                                      const Vec3f &v1,
                                                      const Vec3f &v3) {
@@ -78,7 +81,7 @@ __device__ static Mat3x4f face_dihedral_angle_grad_f(const Vec3f &v2,
     return result;
 }
 
-__device__ static float face_dihedral_angle(const Vec3f &v0, const Vec3f &v1,
+static float face_dihedral_angle(const Vec3f &v0, const Vec3f &v1,
                                             const Vec3f &v2,
                                             const Vec3f &v3) {
     const Vec3f n1 = (v1 - v0).cross((v2 - v0));
@@ -102,7 +105,7 @@ __device__ static float face_dihedral_angle(const Vec3f &v0, const Vec3f &v1,
     return atan2f(sin_t, cos_t);
 }
 
-__device__ static float hinge_compute_energy(const Vec<Vec3f> &vertex,
+static float hinge_compute_energy(const Vec<Vec3f> &vertex,
                                              Vec4u hinge, float rest_angle) {
     hinge = remap(hinge);
     const Vec3f x0 = vertex[hinge[0]];
@@ -127,7 +130,7 @@ __device__ static float hinge_compute_energy(const Vec<Vec3f> &vertex,
 // thousands of random configs (which also exposed four typos in the paper:
 // the rod u-vector b-sign; the shell section-3 sign S3=-sign(tb.t1); Eqn 57's
 // p3 x0-block c-signs; and a missing kappa1 factor in Eqn 49's d-coefficients).
-__device__ static void face_compute_force_hessian(const Vec<Vec3f> &vertex,
+static void face_compute_force_hessian(const Vec<Vec3f> &vertex,
                                                   Vec4u &hinge,
                                                   float rest_angle,
                                                   Mat3x4f &force,
@@ -185,8 +188,8 @@ __device__ static void face_compute_force_hessian(const Vec<Vec3f> &vertex,
     const float gm1 = gamma - 1.0f;
     const float gp1 = gamma + 1.0f;
     const float r = sqrtf(4.0f * w * w * (gm1 / gp1) * (gm1 / gp1) + 1.0f);
-    const float Rm = sqrtf(fmaxf(0.0f, 2.0f * (2.0f * w * w + 1.0f - r)));
-    const float Rp = sqrtf(fmaxf(0.0f, 2.0f * (2.0f * w * w + 1.0f + r)));
+    const float Rm = sqrtf(sycl::fmax(0.0f, 2.0f * (2.0f * w * w + 1.0f - r)));
+    const float Rp = sqrtf(sycl::fmax(0.0f, 2.0f * (2.0f * w * w + 1.0f + r)));
     const float Lh = 1.0f / (l0 * l0) + 1.0f / (l1 * l1);
     const float cc = 4.0f * w / gp1;
     const Mat3x3f eta2 =
@@ -308,7 +311,7 @@ __device__ static void face_compute_force_hessian(const Vec<Vec3f> &vertex,
     Li[1][1] = 1.0f / sqrtf(gg[1]);
     const float L22 = sqrtf(gg[2]);
     const float L32 = g23 / L22;
-    const float L33 = sqrtf(fmaxf(1e-30f, gg[3] - L32 * L32));
+    const float L33 = sqrtf(sycl::fmax(1e-30f, gg[3] - L32 * L32));
     Li[2][2] = 1.0f / L22;
     Li[3][3] = 1.0f / L33;
     Li[3][2] = -L32 / (L22 * L33);
@@ -373,7 +376,7 @@ __device__ static void face_compute_force_hessian(const Vec<Vec3f> &vertex,
                     hess(3 * perm[a] + i, 3 * perm[b] + j) = Hp(3 * a + i, 3 * b + j);
 }
 
-__device__ static float face_energy(const Vec3f &v0, const Vec3f &v1,
+static float face_energy(const Vec3f &v0, const Vec3f &v1,
                                     const Vec3f &v2, const Vec3f &v3,
                                     float rest_angle) {
     float angle = face_dihedral_angle(v0, v1, v2, v3);
@@ -381,7 +384,7 @@ __device__ static float face_energy(const Vec3f &v0, const Vec3f &v1,
     return 0.5f * diff * diff;
 }
 
-__device__ static float strand_energy(const Vec3f &x0, const Vec3f &x1,
+static float strand_energy(const Vec3f &x0, const Vec3f &x1,
                                       const Vec3f &x2, float rest_angle) {
     Vec3f e0 = (x0 - x1);
     Vec3f e1 = (x2 - x1);
@@ -394,7 +397,7 @@ __device__ static float strand_energy(const Vec3f &x0, const Vec3f &x1,
     return 0.5f * diff * diff;
 }
 
-__device__ static Mat3x2f gradient_theta(const Vec3f &e0, const Vec3f &e1) {
+static Mat3x2f gradient_theta(const Vec3f &e0, const Vec3f &e1) {
     // Guard the degenerate / near-degenerate case e0 parallel or
     // antiparallel to e1 (a perfectly straight or back-folded rod
     // segment). |e0 x e1|^2 = |e0|^2 |e1|^2 sin^2(theta), so we reject
@@ -424,7 +427,7 @@ __device__ static Mat3x2f gradient_theta(const Vec3f &e0, const Vec3f &e1) {
     return G;
 }
 
-__device__ static Mat3x3f strand_gradient(const Vec3f &x0, const Vec3f &x1,
+static Mat3x3f strand_gradient(const Vec3f &x0, const Vec3f &x1,
                                           const Vec3f &x2, float rest_angle) {
     Vec3f e0 = (x0 - x1);
     Vec3f e1 = (x2 - x1);
@@ -448,7 +451,7 @@ __device__ static Mat3x3f strand_gradient(const Vec3f &x0, const Vec3f &x1,
 // mapped to the 9 DOFs by the constant Jacobian J = d[e0;e1]/d[x0;x1;x2] =
 // [[I,-I,0],[0,-I,I]]. Verified against finite differences over 3000 random
 // configs (the paper's u-vector b-component R-sign is a typo, corrected below).
-__device__ static void strand_compute_force_hessian(
+static void strand_compute_force_hessian(
     const Vec3f &x0, const Vec3f &x1, const Vec3f &x2, float rest_angle,
     Mat3x3f &force, Mat9x9f &hess) {
     Vec3f e0 = (x0 - x1);
@@ -482,8 +485,8 @@ __device__ static void strand_compute_force_hessian(
     const float gm1 = gamma - 1.0f;
     const float gp1 = gamma + 1.0f;
     const float r = sqrtf(4.0f * w * w * (gm1 / gp1) * (gm1 / gp1) + 1.0f);
-    const float Rm = sqrtf(fmaxf(0.0f, 2.0f * (2.0f * w * w + 1.0f - r)));
-    const float Rp = sqrtf(fmaxf(0.0f, 2.0f * (2.0f * w * w + 1.0f + r)));
+    const float Rm = sqrtf(sycl::fmax(0.0f, 2.0f * (2.0f * w * w + 1.0f - r)));
+    const float Rp = sqrtf(sycl::fmax(0.0f, 2.0f * (2.0f * w * w + 1.0f + r)));
     const float Lh = 1.0f / (l0 * l0) + 1.0f / (l1 * l1); // h = 1
     const float cc = 4.0f * w / gp1;
 

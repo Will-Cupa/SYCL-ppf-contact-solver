@@ -6,6 +6,8 @@
 #ifndef CSR_MAT_DEF_HPP
 #define CSR_MAT_DEF_HPP
 
+#include <sycl/sycl.hpp>
+#include <dpct/dpct.hpp>
 #include "../common.hpp"
 #include "../data.hpp"
 #include "../vec/vec.hpp"
@@ -17,11 +19,11 @@
 
 struct Row {
     enum State { SUCCESS, OVERFLOW, COUNTING };
-    __device__ void alloc();
-    __device__ void clear();
-    __device__ void finalize();
-    __device__ void dry_push(unsigned i);
-    __device__ void push(unsigned i, const Mat3x3f &val);
+    void alloc();
+    void clear();
+    void finalize();
+    void dry_push(unsigned i);
+    void push(unsigned i, const Mat3x3f &val);
     unsigned max_dyn_rows;
     unsigned head{0};
     // Where finalize() left the boundary between the entries this row carried
@@ -46,10 +48,10 @@ struct DynCSRMat {
     void finish_rebuild_buffer(unsigned &max_nnz_row, float &consumed,
                                double &report_overhead_ms);
     void free();
-    __device__ Mat3x3f operator()(unsigned i, unsigned j) const;
-    __device__ void dry_push(unsigned row, unsigned col);
-    __device__ void push(unsigned row, unsigned col, const Mat3x3f &val);
-    __device__ unsigned nnz(unsigned row) const;
+    Mat3x3f operator()(unsigned i, unsigned j) const;
+    void dry_push(unsigned row, unsigned col);
+    void push(unsigned row, unsigned col, const Mat3x3f &val);
+    unsigned nnz(unsigned row) const;
     DynCSRMat clear();
     void finalize();
     bool check();
@@ -73,10 +75,10 @@ struct FixedCSRMat {
                              VecVec<Vec2u> transpose_table);
     void free();
     void clear();
-    __device__ Mat3x3f operator()(unsigned i, unsigned j) const;
-    __device__ bool push(unsigned i, unsigned j, const Mat3x3f &val);
-    __device__ void push_at(unsigned slot, const Mat3x3f &val);
-    __device__ bool exists(unsigned i, unsigned j) const;
+    Mat3x3f operator()(unsigned i, unsigned j) const;
+    bool push(unsigned i, unsigned j, const Mat3x3f &val);
+    void push_at(unsigned slot, const Mat3x3f &val);
+    bool exists(unsigned i, unsigned j) const;
     bool check();
     void copy(const FixedCSRMat &other);
     bool finalize();

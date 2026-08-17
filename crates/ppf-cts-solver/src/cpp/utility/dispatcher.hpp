@@ -10,6 +10,8 @@
 #define __global__
 #endif
 
-#include "dispatcher.cu"
+#include <sycl/sycl.hpp>
+#include <dpct/dpct.hpp>
+#include "dispatcher.dp.cpp"
 
 #endif

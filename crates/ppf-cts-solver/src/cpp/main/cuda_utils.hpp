@@ -10,6 +10,8 @@
 // the Rust host's atexit hook reads to label an exit(1) crash) plus
 // `ppf_fatal`. Included outside the __CUDACC__ guard below because the
 // emulator compiles this header too and terminates on the same invariants.
+#include <sycl/sycl.hpp>
+#include <dpct/dpct.hpp>
 #include "fatal.hpp"
 
 // Process-wide counters of device-memory alloc / free events (every
@@ -28,10 +30,9 @@ extern unsigned long long g_device_free_count;
 // without being parsed, so vec/vec.hpp's allocation methods never
 // reference the CUDA runtime as long as they aren't instantiated by
 // the emulator's code paths.
-#ifdef __CUDACC__
+#ifdef SYCL_LANGUAGE_VERSION
 #include <cstdio>
 #include <cstdlib>
-#include <cuda_runtime.h>
 
 // State of the operating system's kernel-execution watchdog on the device
 // this process selected, as read from `cudaDeviceProp::kernelExecTimeoutEnabled`
@@ -51,7 +52,7 @@ extern int g_ppf_kernel_timeout_enabled;
 // attached. Everything else, from an unsupported architecture to a corrupted
 // context, is reported as CudaDriver and distinguished by the detail, which
 // carries the runtime's own name and message for the error.
-static unsigned char fatal_code_for_cuda(cudaError_t err) {
+static unsigned char fatal_code_for_cuda(dpct::err0 err) {
     if (err == cudaErrorMemoryAllocation) {
         return PPF_FATAL_OOM;
     }
@@ -64,7 +65,7 @@ static unsigned char fatal_code_for_cuda(cudaError_t err) {
     return PPF_FATAL_CUDA_DRIVER;
 }
 
-static void HandleError(cudaError_t err, const char *file, int line) {
+static void HandleError(dpct::err0 err, const char *file, int line) {
     if (err != cudaSuccess) {
         printf("%s in %s at line %d\n", cudaGetErrorString(err), file, line);
         // Label the imminent exit(1) so the host's atexit hook can name the

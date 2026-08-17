@@ -6,6 +6,8 @@
 #ifndef DATA_HPP
 #define DATA_HPP
 
+#include <sycl/sycl.hpp>
+#include <dpct/dpct.hpp>
 #include "linalg/smat.hpp"
 #include "vec/vec.hpp"
 
@@ -306,7 +308,7 @@ struct HingeProp {
 // With warp and weft at their 0.0f defaults the result is `bend` exactly, for
 // any orientation and including the no-UV sentinel, so a scene that does not
 // ask for anisotropy is bit-identical to one built before this existed.
-__device__ __host__ inline float hinge_bend_directional(float bend, float warp,
+inline float hinge_bend_directional(float bend, float warp,
                                                         float weft,
                                                         float sin2) {
     if (sin2 < 0.0f) {

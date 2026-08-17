@@ -6,6 +6,8 @@
 #ifndef VEC_HPP
 #define VEC_HPP
 
+#include <sycl/sycl.hpp>
+#include <dpct/dpct.hpp>
 #include "../main/cuda_utils.hpp"
 #include "../kernels/vec_ops.hpp"
 #include <cassert>
@@ -21,7 +23,7 @@ template <class T> struct VecVec {
     unsigned nnz_allocated{0};
     unsigned offset_allocated{0};
 
-    __host__ static VecVec<T> alloc(unsigned nrow, unsigned max_nnz) {
+    static VecVec<T> alloc(unsigned nrow, unsigned max_nnz) {
         VecVec<T> result;
         result.size = nrow;
         result.nnz = 0;
@@ -34,7 +36,7 @@ template <class T> struct VecVec {
         return result;
     }
 
-    __host__ __device__ T &operator()(unsigned i, unsigned j) {
+    T &operator()(unsigned i, unsigned j) {
         if (i >= size) {
             printf("VecVec: operator() i = %u, size = %u\n", i, size);
             assert(false);
@@ -46,7 +48,7 @@ template <class T> struct VecVec {
         }
         return data[k];
     }
-    __host__ __device__ const T &operator()(unsigned i, unsigned j) const {
+    const T &operator()(unsigned i, unsigned j) const {
         if (i >= size) {
             printf("VecVec: const T &operator() i = %u, size = %u\n", i, size);
             assert(false);
@@ -58,7 +60,7 @@ template <class T> struct VecVec {
         }
         return data[k];
     }
-    __host__ __device__ unsigned count(unsigned i) const {
+    unsigned count(unsigned i) const {
         if (size == 0) {
             return 0;
         }
@@ -68,7 +70,7 @@ template <class T> struct VecVec {
         }
         return offset[i + 1] - offset[i];
     }
-    __host__ __device__ unsigned count() const {
+    unsigned count() const {
         if (size == 0) {
             return 0;
         }
@@ -82,14 +84,14 @@ template <class T> struct Vec {
     unsigned size{0};
     unsigned allocated{0};
 
-    __host__ __device__ T &operator[](unsigned i) {
+    T &operator[](unsigned i) {
         if (i >= size) {
             printf("Vec: operator[] i = %u, size = %u\n", i, size);
             assert(false);
         }
         return data[i];
     }
-    __host__ __device__ const T &operator[](unsigned i) const {
+    const T &operator[](unsigned i) const {
         if (i >= size) {
             printf("Vec: const T &operator[] i = %u, size = %u\n", i, size);
             assert(false);
@@ -145,7 +147,7 @@ template <class T> struct Vec {
         }
         return *this;
     }
-    __device__ void atomic_add(unsigned i, const T &val) {
+    void atomic_add(unsigned i, const T &val) {
         assert(i < size);
         if (val) {
             atomicAdd(&data[i], val);

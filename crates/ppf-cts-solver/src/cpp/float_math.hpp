@@ -7,6 +7,8 @@
 #define FLOAT_MATH_HPP
 
 #include <cassert>
+#include <sycl/sycl.hpp>
+#include <dpct/dpct.hpp>
 #include <cmath>
 
 // Some of the headers that include this are also compiled without nvcc, where
@@ -49,20 +51,20 @@ namespace fmath {
 enum : int { BOUNDED_LIMIT = 7 };
 
 // cos and sin for an argument the caller knows is bounded.
-__device__ __host__ inline float cos_bounded(float x) {
-    assert(fabsf(x) <= float(BOUNDED_LIMIT) &&
+inline float cos_bounded(float x) {
+    assert(sycl::fabs(x) <= float(BOUNDED_LIMIT) &&
            "fmath::cos_bounded called with an unbounded argument");
-#ifdef __CUDA_ARCH__
+#ifdef DPCT_COMPATIBILITY_TEMP
     return __cosf(x);
 #else
     return std::cos(x);
 #endif
 }
 
-__device__ __host__ inline float sin_bounded(float x) {
-    assert(fabsf(x) <= float(BOUNDED_LIMIT) &&
+inline float sin_bounded(float x) {
+    assert(sycl::fabs(x) <= float(BOUNDED_LIMIT) &&
            "fmath::sin_bounded called with an unbounded argument");
-#ifdef __CUDA_ARCH__
+#ifdef DPCT_COMPATIBILITY_TEMP
     return __sinf(x);
 #else
     return std::sin(x);
@@ -73,8 +75,8 @@ __device__ __host__ inline float sin_bounded(float x) {
 // is a float multiply, floor and subtract, so it costs the low bits of a large
 // argument; a caller that needs those bits needs a different formulation, not a
 // more accurate reduction here.
-__device__ __host__ inline float sin_periodic(float x) {
-#ifdef __CUDA_ARCH__
+inline float sin_periodic(float x) {
+#ifdef DPCT_COMPATIBILITY_TEMP
     const float kTwoPi = 6.28318530718f;
     float turns = x * (1.0f / kTwoPi);
     return __sinf(x - kTwoPi * floorf(turns));
@@ -83,16 +85,16 @@ __device__ __host__ inline float sin_periodic(float x) {
 #endif
 }
 
-__device__ __host__ inline float exp(float x) {
-#ifdef __CUDA_ARCH__
-    return __expf(x);
+inline float exp(float x) {
+#ifdef DPCT_COMPATIBILITY_TEMP
+    return sycl::native::exp(x);
 #else
     return std::exp(x);
 #endif
 }
 
-__device__ __host__ inline float log(float x) {
-#ifdef __CUDA_ARCH__
+inline float log(float x) {
+#ifdef DPCT_COMPATIBILITY_TEMP
     return __logf(x);
 #else
     return std::log(x);

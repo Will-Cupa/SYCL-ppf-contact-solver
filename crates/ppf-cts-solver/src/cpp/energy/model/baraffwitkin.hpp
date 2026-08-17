@@ -6,25 +6,28 @@
 #ifndef BARAFFWITKIN_HPP
 #define BARAFFWITKIN_HPP
 
+#include <sycl/sycl.hpp>
+#include <dpct/dpct.hpp>
 #include "../../common.hpp"
 #include "../../data.hpp"
+#include <cmath>
 
 namespace BaraffWitkin {
 
-__device__ float sqr(float x) { return x * x; }
+float sqr(float x) { return x * x; }
 
-__device__ float stretch_energy(const Mat3x2f &F, float mu) {
+float stretch_energy(const Mat3x2f &F, float mu) {
     float i5u = F.col(0).squaredNorm();
     float i5v = F.col(1).squaredNorm();
     return 0.5f * mu * (sqr(sqrtf(i5u) - 1.0f) + sqr(sqrtf(i5v) - 1.0f));
 }
 
-__device__ float shear_energy(const Mat3x2f &F, float lmd) {
+float shear_energy(const Mat3x2f &F, float lmd) {
     float i6 = F.col(0).dot(F.col(1));
     return 0.5f * lmd * sqr(i6);
 }
 
-__device__ Mat3x2f stretch_gradient(const Mat3x2f &F, float mu) {
+Mat3x2f stretch_gradient(const Mat3x2f &F, float mu) {
     const Vec3f fu = F.col(0);
     const Vec3f fv = F.col(1);
     float norm_u = fu.norm();
@@ -34,7 +37,7 @@ __device__ Mat3x2f stretch_gradient(const Mat3x2f &F, float mu) {
     return mu * result;
 }
 
-__device__ Mat6x6f stretch_hessian(const Mat3x2f &F, float mu) {
+Mat6x6f stretch_hessian(const Mat3x2f &F, float mu) {
     float f1 = F(0, 0), f2 = F(1, 0), f3 = F(2, 0);
     float f4 = F(0, 1), f5 = F(1, 1), f6 = F(2, 1);
     float norm_1 = F.col(0).norm();
@@ -108,20 +111,20 @@ __device__ Mat6x6f stretch_hessian(const Mat3x2f &F, float mu) {
     return mu * H;
 }
 
-__device__ Mat3x2f shear_gradient(const Mat3x2f &F, float lmd) {
+Mat3x2f shear_gradient(const Mat3x2f &F, float lmd) {
     float w = F.col(0).dot(F.col(1));
     Mat3x2f result;
     result << w * F.col(1), w * F.col(0);
     return lmd * result;
 }
 
-__device__ Mat2x2f helper_adj2x2(const Mat2x2f &A) {
+Mat2x2f helper_adj2x2(const Mat2x2f &A) {
     Mat2x2f result;
     result << A(1, 1), -A(0, 1), -A(1, 0), A(0, 0);
     return result;
 }
 
-__device__ Mat6x6f shear_hessian(const Mat3x2f &F, float lmd) {
+Mat6x6f shear_hessian(const Mat3x2f &F, float lmd) {
     float I6 = F.col(0).dot(F.col(1));
     float I2 = F.squaredNorm();
 

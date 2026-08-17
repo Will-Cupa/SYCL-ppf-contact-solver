@@ -6,15 +6,17 @@
 #ifndef air_DAMP_HPP
 #define air_DAMP_HPP
 
+#include <sycl/sycl.hpp>
+#include <dpct/dpct.hpp>
 #include "../../data.hpp"
 
 namespace air_damper {
 
-__device__ Mat3x3f get_proj_op(const Vec3f &normal) {
+Mat3x3f get_proj_op(const Vec3f &normal) {
     return Mat3x3f::Identity() - normal * normal.transpose();
 }
 
-__device__ float face_energy(float dt, const Vec3f &x1, const Vec3f &x0,
+float face_energy(float dt, const Vec3f &x1, const Vec3f &x0,
                              const Vec3f &normal, const Vec3f &wind,
                              const ParamSet &param) {
     Vec3f z = (x1 - x0) - dt * wind;
@@ -24,7 +26,7 @@ __device__ float face_energy(float dt, const Vec3f &x1, const Vec3f &x0,
     return 0.5f * (f * f + param.air_friction * g.squaredNorm()) / (dt * dt);
 }
 
-__device__ Vec3f face_gradient(float dt, const Vec3f &x1, const Vec3f &x0,
+Vec3f face_gradient(float dt, const Vec3f &x1, const Vec3f &x0,
                                const Vec3f &normal, const Vec3f &wind,
                                const ParamSet &param) {
     Vec3f z = (x1 - x0) - dt * wind;
@@ -33,7 +35,7 @@ __device__ Vec3f face_gradient(float dt, const Vec3f &x1, const Vec3f &x0,
            param.air_friction * P * z / (dt * dt);
 }
 
-__device__ Mat3x3f face_hessian(float dt, const Vec3f &normal,
+Mat3x3f face_hessian(float dt, const Vec3f &normal,
                                 const ParamSet &param) {
     Mat3x3f P = get_proj_op(normal);
     return normal * normal.transpose() / (dt * dt) +

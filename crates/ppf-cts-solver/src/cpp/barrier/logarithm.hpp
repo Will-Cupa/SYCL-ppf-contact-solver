@@ -6,12 +6,14 @@
 #ifndef LOGARITHM_HPP
 #define LOGARITHM_HPP
 
+#include <sycl/sycl.hpp>
+#include <dpct/dpct.hpp>
 #include "../data.hpp"
 #include "../float_math.hpp"
 
 namespace logarithm {
 
-__device__ static float energy(float g, float ghat, float offset) {
+static float energy(float g, float ghat, float offset) {
     g -= offset;
     if (g <= 0.0f) {
         return std::numeric_limits<float>::infinity();
@@ -21,7 +23,7 @@ __device__ static float energy(float g, float ghat, float offset) {
     return -(g - ghat) * (g - ghat) * fmath::log(g / ghat);
 }
 
-__device__ static float gradient(float g, float ghat, float offset) {
+static float gradient(float g, float ghat, float offset) {
     g -= offset;
     if (g <= 0.0f) {
         return -std::numeric_limits<float>::infinity();
@@ -31,7 +33,7 @@ __device__ static float gradient(float g, float ghat, float offset) {
     return (ghat - g) * (2.0f * g * fmath::log(g / ghat) + g - ghat) / g;
 }
 
-__device__ static float curvature(float g, float ghat, float offset) {
+static float curvature(float g, float ghat, float offset) {
     g -= offset;
     if (g <= 0.0f) {
         return std::numeric_limits<float>::infinity();

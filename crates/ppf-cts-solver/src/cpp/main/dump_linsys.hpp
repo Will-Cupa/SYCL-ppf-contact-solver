@@ -18,6 +18,8 @@
 #ifndef DUMP_LINSYS_HPP
 #define DUMP_LINSYS_HPP
 
+#include <sycl/sycl.hpp>
+#include <dpct/dpct.hpp>
 #include "../csrmat/csrmat.hpp"
 #include "../data.hpp"
 #include "../vec/vec.hpp"
@@ -33,9 +35,10 @@ namespace dump_linsys {
 // out into `diag` (summed with C separately on the host); strictly-upper blocks
 // (col > row) go to the off-diagonal COO. Lower-triangle blocks are not stored
 // by either CSR (they are implied transposes), so they are not emitted.
-__global__ void dyn_coo_kernel(Vec<Row> rows, unsigned nrow, unsigned *cursor,
+void dyn_coo_kernel(Vec<Row> rows, unsigned nrow, unsigned *cursor,
                                unsigned *out_row, unsigned *out_col,
                                Mat3x3f *out_val, Mat3x3f *diag, unsigned cap) {
+    auto item_ct1 = sycl::ext::oneapi::this_work_item::get_nd_item<3>();
     unsigned i = blockIdx.x * blockDim.x + threadIdx.x;
     if (i >= nrow) {
         return;
@@ -56,9 +59,10 @@ __global__ void dyn_coo_kernel(Vec<Row> rows, unsigned nrow, unsigned *cursor,
     }
 }
 
-__global__ void fixed_coo_kernel(FixedCSRMat B, unsigned nrow, unsigned *cursor,
+void fixed_coo_kernel(FixedCSRMat B, unsigned nrow, unsigned *cursor,
                                  unsigned *out_row, unsigned *out_col,
                                  Mat3x3f *out_val, Mat3x3f *diag, unsigned cap) {
+    auto item_ct1 = sycl::ext::oneapi::this_work_item::get_nd_item<3>();
     unsigned i = blockIdx.x * blockDim.x + threadIdx.x;
     if (i >= nrow) {
         return;
@@ -81,7 +85,8 @@ __global__ void fixed_coo_kernel(FixedCSRMat B, unsigned nrow, unsigned *cursor,
 }
 
 // Add C (the per-vertex diagonal inertia+contact block) into diag.
-__global__ void add_diag_kernel(const Mat3x3f *C, Mat3x3f *diag, unsigned nrow) {
+void add_diag_kernel(const Mat3x3f *C, Mat3x3f *diag, unsigned nrow) {
+    auto item_ct1 = sycl::ext::oneapi::this_work_item::get_nd_item<3>();
     unsigned i = blockIdx.x * blockDim.x + threadIdx.x;
     if (i < nrow) {
         diag[i] += C[i];

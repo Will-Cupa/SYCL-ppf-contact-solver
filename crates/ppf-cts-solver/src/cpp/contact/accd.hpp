@@ -6,7 +6,11 @@
 #ifndef ACCD_HPP
 #define ACCD_HPP
 
+#include <sycl/sycl.hpp>
+#include <dpct/dpct.hpp>
 #include "distance.hpp"
+#include <cmath>
+
 #include <cassert>
 #include <cfloat>
 
@@ -21,7 +25,7 @@ using _coord_ = float;
 // with a clear, structured OverlappingStart crash. Defined in contact.cu (the
 // only translation unit that includes this header); cleared host-side before
 // each line search and read after it.
-extern __device__ unsigned g_ccd_overlap;
+extern unsigned g_ccd_overlap;
 
 // A representative overlapping pair (two vertex indices) and its kind
 // (0 = vertex-face, 1 = edge-edge, 2 = point-point), recorded once by the first
@@ -29,9 +33,9 @@ extern __device__ unsigned g_ccd_overlap;
 // way an infeasible-pin crash names its vertex. The CCD structs (which hold the
 // indices) record these; ccd_helper only flips g_ccd_overlap. UINT_MAX means
 // "unset". Cleared host-side alongside g_ccd_overlap.
-extern __device__ unsigned g_ccd_overlap_v0;
-extern __device__ unsigned g_ccd_overlap_v1;
-extern __device__ unsigned g_ccd_overlap_kind;
+extern unsigned g_ccd_overlap_v0;
+extern unsigned g_ccd_overlap_v1;
+extern unsigned g_ccd_overlap_kind;
 
 // The squared start distance and offset of a flagged pair, in ccd_helper's
 // internally rescaled units, written at the flag sites (plain last-writer
@@ -40,8 +44,8 @@ extern __device__ unsigned g_ccd_overlap_kind;
 // as coincident). A pair flagged for a collapsed sweep frame has no
 // such scale, so it records a distance of exactly zero and leaves the
 // offset unset. Cleared host-side alongside g_ccd_overlap.
-extern __device__ float g_ccd_overlap_d2;
-extern __device__ float g_ccd_overlap_offset;
+extern float g_ccd_overlap_d2;
+extern float g_ccd_overlap_offset;
 
 
 // Flag a pair whose sweep frame has collapsed to a point. The two primitives
@@ -54,7 +58,7 @@ extern __device__ float g_ccd_overlap_offset;
 // unset: ccd_helper's flag sites record it in the frame rescale gave them,
 // and a collapsed frame has no such scale, so recording the raw value here
 // would put two different meanings behind one reported number.
-__device__ inline float report_coincident() {
+inline float report_coincident() {
     g_ccd_overlap = 1u;
     g_ccd_overlap_d2 = 0.0f;
     g_ccd_overlap_offset = -1.0f;
@@ -62,7 +66,7 @@ __device__ inline float report_coincident() {
 }
 
 template <class T, unsigned R, unsigned C>
-__device__ void centerize(SMat<T, R, C> &x) {
+void centerize(SMat<T, R, C> &x) {
     SVec<T, R> mov = SVec<T, R>::Zero();
     T scale(1.0 / C);
     for (int k = 0; k < C; k++) {
@@ -74,7 +78,7 @@ __device__ void centerize(SMat<T, R, C> &x) {
 }
 
 template <class T, unsigned R, unsigned C>
-__device__ float rescale(SMat<T, R, C> &x, SMat<T, R, C> &dx, float max_t) {
+float rescale(SMat<T, R, C> &x, SMat<T, R, C> &dx, float max_t) {
     T max_entry =
         max(x.cwiseAbs().maxCoeff(), (x + T(max_t) * dx).cwiseAbs().maxCoeff());
     // Normalize the sweep's frame: the largest coordinate magnitude reached
@@ -139,7 +143,7 @@ __device__ float rescale(SMat<T, R, C> &x, SMat<T, R, C> &dx, float max_t) {
 // Narrowing further requires reading the POSITIONS as well, which is what
 // directional_advance below does.
 template <class T, unsigned R, unsigned C, unsigned SPLIT>
-__device__ float max_relative_u(const SMat<T, R, C> &u) {
+float max_relative_u(const SMat<T, R, C> &u) {
     float max_u = 0.0f;
     for (int i = 0; i < SPLIT; i++) {
         for (int j = SPLIT; j < C; j++) {
@@ -239,7 +243,7 @@ __device__ float max_relative_u(const SMat<T, R, C> &u) {
 // direction the projected gap cannot decrease, so it stays at its current value
 // for the rest of the sweep, and that value is already above the park.
 template <class T, unsigned R, unsigned C, unsigned SPLIT>
-__device__ float directional_advance(const SMat<T, R, C> &x,
+float directional_advance(const SMat<T, R, C> &x,
                                      const SMat<T, R, C> &dx,
                                      const SVec<float, R> &w, float w_norm,
                                      float dip, float park, float max_t) {
@@ -273,7 +277,8 @@ __device__ float directional_advance(const SMat<T, R, C> &x,
             }
             float rate = w.dot(rel);
             if (rate > 0.0f) {
-                step = fminf(step, fmaxf(0.0f, projected - park_w) / rate);
+                step = sycl::fmin(step,
+                                  sycl::fmax(0.0f, projected - park_w) / rate);
             }
         }
     }
@@ -286,10 +291,10 @@ __device__ float directional_advance(const SMat<T, R, C> &x,
 // gap measured in units of the barrier's own activation distance, not on any
 // absolute length. Callers rescale it into the sweep frame alongside offset and
 // eps. See the parking-clearance derivation in ccd_helper.
-__device__ float park_floor(float ghat) { return 1e-2f * ghat; }
+float park_floor(float ghat) { return 1e-2f * ghat; }
 
 template <typename F, typename T, unsigned R, unsigned C, unsigned SPLIT>
-__device__ float ccd_helper(const SMat<T, R, C> &x0, const SMat<T, R, C> &dx,
+float ccd_helper(const SMat<T, R, C> &x0, const SMat<T, R, C> &dx,
                             float u_max, F square_dist_func, float offset,
                             float eps, float floor_gap, const ParamSet &param) {
     SMat<T, R, C> x = x0;
@@ -376,10 +381,11 @@ __device__ float ccd_helper(const SMat<T, R, C> &x0, const SMat<T, R, C> &dx,
     // before authoring one. Parking earlier is conservative, so
     // penetration-free is unaffected.
     float clearance = sqrtf(d2) - offset;
-    float floor_clear = fmaxf(2.0f * eps, floor_gap);
-    float park = offset + fminf(floor_clear,
-                                fmaxf(clearance - 0.5f * eps, 0.5f * clearance));
-    float overshoot = fmaxf(0.0f, (park - offset) - 0.5f * floor_clear);
+    float floor_clear = sycl::fmax(2.0f * eps, floor_gap);
+    float park =
+        offset + sycl::fmin(floor_clear, sycl::fmax(clearance - 0.5f * eps,
+                                                    0.5f * clearance));
+    float overshoot = sycl::fmax(0.0f, (park - offset) - 0.5f * floor_clear);
     // The worst state the sweep may reach between two probes, named once so
     // both certificates below are stated against the same level: the
     // direction-agnostic step and the directional one then guarantee exactly
@@ -394,7 +400,7 @@ __device__ float ccd_helper(const SMat<T, R, C> &x0, const SMat<T, R, C> &dx,
     // strictly below the entry d2 so the sweep always starts outside it and
     // the bisection's overlap branch below stays unreachable for a legal
     // (separated) start.
-    float park_squared = fminf(park * park, nextafterf(d2, 0.0f));
+    float park_squared = sycl::fmin(park * park, nextafterf(d2, 0.0f));
     float inv_u_max = 1.0f / u_max;
 
     // With a zero overshoot (a pair inside the parking band) the advance
@@ -487,11 +493,11 @@ __device__ float ccd_helper(const SMat<T, R, C> &x0, const SMat<T, R, C> &dx,
 // nothing. The one-argument form exists for the entry check and the bisection,
 // which need only the distance.
 template <typename T, typename Y> struct EdgeEdgeSquaredDist {
-    __device__ float operator()(const Mat3x4<T> &x) {
+    float operator()(const Mat3x4<T> &x) {
         Vec3<Y> dir;
         return (*this)(x, dir);
     }
-    __device__ float operator()(const Mat3x4<T> &x, Vec3<Y> &dir) {
+    float operator()(const Mat3x4<T> &x, Vec3<Y> &dir) {
         const Vec3<T> &p0 = x.col(0);
         const Vec3<T> &p1 = x.col(1);
         const Vec3<T> &q0 = x.col(2);
@@ -507,11 +513,11 @@ template <typename T, typename Y> struct EdgeEdgeSquaredDist {
 };
 
 template <typename T, typename Y> struct PointEdgeSquaredDist {
-    __device__ float operator()(const Mat3x3<T> &x) {
+    float operator()(const Mat3x3<T> &x) {
         Vec3<Y> dir;
         return (*this)(x, dir);
     }
-    __device__ float operator()(const Mat3x3<T> &x, Vec3<Y> &dir) {
+    float operator()(const Mat3x3<T> &x, Vec3<Y> &dir) {
         const Vec3<T> &p = x.col(0);
         const Vec3<T> &q0 = x.col(1);
         const Vec3<T> &q1 = x.col(2);
@@ -527,11 +533,11 @@ template <typename T, typename Y> struct PointEdgeSquaredDist {
 };
 
 template <typename T, typename Y> struct PointPointSquaredDist {
-    __device__ float operator()(const Mat3x2<T> &x) {
+    float operator()(const Mat3x2<T> &x) {
         Vec3<Y> dir;
         return (*this)(x, dir);
     }
-    __device__ float operator()(const Mat3x2<T> &x, Vec3<Y> &dir) {
+    float operator()(const Mat3x2<T> &x, Vec3<Y> &dir) {
         const Vec3<T> &p = x.col(0);
         const Vec3<T> &q = x.col(1);
         dir = (q - p).template cast<Y>();
@@ -540,11 +546,11 @@ template <typename T, typename Y> struct PointPointSquaredDist {
 };
 
 template <typename T, typename Y> struct PointTriangleSquaredDist {
-    __device__ float operator()(const Mat3x4<T> &x) {
+    float operator()(const Mat3x4<T> &x) {
         Vec3<Y> dir;
         return (*this)(x, dir);
     }
-    __device__ float operator()(const Mat3x4<T> &x, Vec3<Y> &dir) {
+    float operator()(const Mat3x4<T> &x, Vec3<Y> &dir) {
         const Vec3<T> &p = x.col(0);
         const Vec3<T> &t0 = x.col(1);
         const Vec3<T> &t1 = x.col(2);
@@ -562,7 +568,7 @@ template <typename T, typename Y> struct PointTriangleSquaredDist {
     }
 };
 
-__device__ float point_triangle_ccd(const Vec3f &p0, const Vec3f &p1,
+float point_triangle_ccd(const Vec3f &p0, const Vec3f &p1,
                                     const Vec3f &t00, const Vec3f &t01,
                                     const Vec3f &t02, const Vec3f &t10,
                                     const Vec3f &t11, const Vec3f &t12,
@@ -597,7 +603,7 @@ __device__ float point_triangle_ccd(const Vec3f &p0, const Vec3f &p1,
     }
 }
 
-__device__ float point_edge_ccd(const Vec3f &p0, const Vec3f &p1,
+float point_edge_ccd(const Vec3f &p0, const Vec3f &p1,
                                 const Vec3f &e00, const Vec3f &e01,
                                 const Vec3f &e10, const Vec3f &e11,
                                 float offset, float ghat,
@@ -630,7 +636,7 @@ __device__ float point_edge_ccd(const Vec3f &p0, const Vec3f &p1,
     }
 }
 
-__device__ float point_point_ccd(const Vec3f &p0, const Vec3f &p1,
+float point_point_ccd(const Vec3f &p0, const Vec3f &p1,
                                  const Vec3f &q0, const Vec3f &q1, float offset,
                                  float ghat, const ParamSet &param) {
     Vec3f dp = p1 - p0;
@@ -660,7 +666,7 @@ __device__ float point_point_ccd(const Vec3f &p0, const Vec3f &p1,
     }
 }
 
-__device__ float edge_edge_ccd(const Vec3f &ea00, const Vec3f &ea01,
+float edge_edge_ccd(const Vec3f &ea00, const Vec3f &ea01,
                                const Vec3f &eb00, const Vec3f &eb01,
                                const Vec3f &ea10, const Vec3f &ea11,
                                const Vec3f &eb10, const Vec3f &eb11,

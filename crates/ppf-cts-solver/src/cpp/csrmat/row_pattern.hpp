@@ -1,3 +1,5 @@
+#include <sycl/sycl.hpp>
+#include <dpct/dpct.hpp>
 // File: row_pattern.hpp
 // Code: Claude Code and Codex
 // Review: Ryoichi Ando (ryoichi.ando@zozo.com)
@@ -41,7 +43,7 @@
 // row or confirming one, so the repair path has no input that degrades it.
 
 // Restore the heap property at `root` over `a[0, n)`.
-__host__ __device__ inline void pattern_sift(unsigned *a, unsigned n,
+inline void pattern_sift(unsigned *a, unsigned n,
                                              unsigned root) {
     for (;;) {
         unsigned largest = root;
@@ -64,7 +66,7 @@ __host__ __device__ inline void pattern_sift(unsigned *a, unsigned n,
 }
 
 // Sort `a[0, n)` ascending, in place, with no scratch and no recursion.
-__host__ __device__ inline void sort_pattern(unsigned *a, unsigned n) {
+inline void sort_pattern(unsigned *a, unsigned n) {
     if (n < 2) {
         return;
     }
@@ -97,7 +99,7 @@ __host__ __device__ inline void sort_pattern(unsigned *a, unsigned n) {
 // Merge two ascending runs into `out`, which must not overlap either of them.
 // The caller has them side by side inside one row and writes the result into
 // the pattern buffer, which is separate storage, so there is nothing to alias.
-__host__ __device__ inline void merge_runs(const unsigned *a, unsigned na,
+inline void merge_runs(const unsigned *a, unsigned na,
                                            const unsigned *b, unsigned nb,
                                            unsigned *out) {
     unsigned i = 0;
@@ -116,7 +118,7 @@ __host__ __device__ inline void merge_runs(const unsigned *a, unsigned na,
 
 // Position of `key` in the sorted `a[0, n)`, or `n` if it is not there. `n` is
 // never a valid position, so it doubles as the absent marker.
-__host__ __device__ inline unsigned find_sorted(const unsigned *a, unsigned n,
+inline unsigned find_sorted(const unsigned *a, unsigned n,
                                                 unsigned key) {
     unsigned lo = 0;
     unsigned hi = n;

@@ -6,13 +6,15 @@
 #ifndef AABB_HPP
 #define AABB_HPP
 
+#include <sycl/sycl.hpp>
+#include <dpct/dpct.hpp>
 #include "../data.hpp"
 
 #define AABB_MAX_QUERY 128
 
 namespace aabb {
 
-__device__ AABB join(const AABB &a, const AABB &b) {
+AABB join(const AABB &a, const AABB &b) {
     AABB result;
     result.min = Vec3f(std::min(a.min[0], b.min[0]), std::min(a.min[1], b.min[1]),
                         std::min(a.min[2], b.min[2]));
@@ -22,7 +24,7 @@ __device__ AABB join(const AABB &a, const AABB &b) {
     return result;
 }
 
-__device__ AABB make(const Vec3f &x0, const Vec3f &x1, const Vec3f &x2,
+AABB make(const Vec3f &x0, const Vec3f &x1, const Vec3f &x2,
                      float _margin) {
     AABB result;
     result.min = Vec3f(std::min(x0[0], std::min(x1[0], x2[0])),
@@ -42,7 +44,7 @@ __device__ AABB make(const Vec3f &x0, const Vec3f &x1, const Vec3f &x2,
     return result;
 }
 
-__device__ AABB make(const Vec3f &x0, const Vec3f &x1, float _margin) {
+AABB make(const Vec3f &x0, const Vec3f &x1, float _margin) {
     AABB result;
     result.min = Vec3f(std::min(x0[0], x1[0]), std::min(x0[1], x1[1]),
                         std::min(x0[2], x1[2]));
@@ -59,7 +61,7 @@ __device__ AABB make(const Vec3f &x0, const Vec3f &x1, float _margin) {
     return result;
 }
 
-__device__ AABB make(const Vec3f &x, float _margin) {
+AABB make(const Vec3f &x, float _margin) {
     float margin = float(_margin);
     AABB result;
     result.min = x - Vec3f(margin, margin, margin);
@@ -68,7 +70,7 @@ __device__ AABB make(const Vec3f &x, float _margin) {
     return result;
 }
 
-__device__ bool overlap(const AABB &a, const AABB &b) {
+bool overlap(const AABB &a, const AABB &b) {
     if (!a.active || !b.active) return false;
     return (a.min[0] <= b.max[0] && a.max[0] >= b.min[0]) &&
            (a.min[1] <= b.max[1] && a.max[1] >= b.min[1]) &&
@@ -76,7 +78,7 @@ __device__ bool overlap(const AABB &a, const AABB &b) {
 }
 
 template <typename F, typename T>
-__device__ unsigned query(const BVH &bvh, Vec<AABB> aabb, F op, T query) {
+unsigned query(const BVH &bvh, Vec<AABB> aabb, F op, T query) {
     unsigned stack[AABB_MAX_QUERY];
     unsigned count = 0;
     unsigned head = 0;

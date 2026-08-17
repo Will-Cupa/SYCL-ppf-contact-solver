@@ -6,14 +6,17 @@
 #ifndef INFLATE_HPP
 #define INFLATE_HPP
 
+#include <sycl/sycl.hpp>
+#include <dpct/dpct.hpp>
 #include "../../data.hpp"
 #include "../../linalg/eigsolve.hpp"
+#include <cmath>
 
 namespace inflate {
 
 // Pressure potential: E = -(P/6) * x0 · (x1 × x2)
 // Gradient: dE/dx0 = -(P/6)(x1 × x2), etc.
-__device__ Mat3x3f face_gradient(float pressure, const Vec3f &v0,
+Mat3x3f face_gradient(float pressure, const Vec3f &v0,
                                  const Vec3f &v1, const Vec3f &v2) {
     float coeff = -pressure / 6.0f;
     Mat3x3f g;
@@ -41,7 +44,7 @@ __device__ Mat3x3f face_gradient(float pressure, const Vec3f &v0,
 // genuinely translation-variant (only the sum over a closed surface is
 // invariant), so the large terms are real signal, not error; what this removes
 // is the catastrophic cancellation that previously destroyed the small part.
-__device__ Mat3x3f face_gradient_conditioned(float pressure, const Vec3f &v0,
+Mat3x3f face_gradient_conditioned(float pressure, const Vec3f &v0,
                                              const Vec3f &e1,
                                              const Vec3f &e2) {
     float coeff = -pressure / 6.0f;
@@ -67,7 +70,7 @@ __device__ Mat3x3f face_gradient_conditioned(float pressure, const Vec3f &v0,
 //   3 from swap pairs  +  2 from the diagonal subspace.
 // The projected Hessian is rank 5.
 //
-__device__ Mat9x9f face_hessian(float pressure, const Vec3f &v0,
+Mat9x9f face_hessian(float pressure, const Vec3f &v0,
                                 const Vec3f &v1, const Vec3f &v2) {
 
     Mat3x3f X;

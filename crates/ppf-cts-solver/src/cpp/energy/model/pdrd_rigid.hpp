@@ -51,6 +51,8 @@
 #ifndef PDRD_RIGID_HPP
 #define PDRD_RIGID_HPP
 
+#include <sycl/sycl.hpp>
+#include <dpct/dpct.hpp>
 #include "../../buffer/buffer.hpp"
 #include "../../common.hpp"
 #include "../../data.hpp"
@@ -101,8 +103,9 @@ struct RigidState {
 // shared-memory reduction: each thread adds its grid-stride partials straight
 // into the shared accumulators with atomicAdd, no warp-level primitives). R_b is
 // the polar factor of M (Kabsch). Also stashes I_ref and m_total for assembly.
-static __global__ void fit_rigid_kernel(DataSet data, Vec<Vec3f> eval_x,
+static void fit_rigid_kernel(DataSet data, Vec<Vec3f> eval_x,
                                         Vec<RigidState> state) {
+    auto item_ct1 = sycl::ext::oneapi::this_work_item::get_nd_item<3>();
     const unsigned body_id = blockIdx.x;
     const unsigned tid = threadIdx.x;
     const unsigned T = blockDim.x;
@@ -194,8 +197,9 @@ static __global__ void fit_rigid_kernel(DataSet data, Vec<Vec3f> eval_x,
 // Reconstruct PDRD vertex positions x_v = x_b + R_b ybar_k into `out` (indexed by
 // GLOBAL vertex id, float). Cloth entries are left untouched, so the caller
 // must pre-fill `out` (e.g. out = eval_x) before calling.
-static __global__ void reconstruct_rigid_kernel(Vec<RigidState> state,
+static void reconstruct_rigid_kernel(Vec<RigidState> state,
                                                 DataSet data, Vec<Vec3f> out) {
+    auto item_ct1 = sycl::ext::oneapi::this_work_item::get_nd_item<3>();
     const unsigned body_id = blockIdx.x;
     const unsigned tid = threadIdx.x;
     const unsigned T = blockDim.x;
@@ -252,8 +256,9 @@ inline void launch_rigidify_to(const DataSet &data, const Vec<Vec3f> &eval_x,
 // col-major per body.
 // ===========================================================================
 
-static __global__ void copy_state_R_kernel(unsigned nb, Vec<RigidState> state,
+static void copy_state_R_kernel(unsigned nb, Vec<RigidState> state,
                                            Vec<float> Rbuf) {
+    auto item_ct1 = sycl::ext::oneapi::this_work_item::get_nd_item<3>();
     unsigned b = blockIdx.x * blockDim.x + threadIdx.x;
     if (b >= nb) return;
     for (unsigned e = 0; e < 9; ++e) Rbuf.data[9 * b + e] = state.data[b].R[e];
@@ -286,8 +291,9 @@ inline void launch_seed_rprev(const DataSet &data, const Vec<Vec3f> &eval_x,
 
 // R_run[b] <- exp(scale * dtheta_b) * R_run[b] (applied rotation increment;
 // scale = toi_recale*toi). dtheta is [3*nb]. One thread per body.
-static __global__ void compose_rrun_kernel(unsigned nb, Vec<float> Rrun,
+static void compose_rrun_kernel(unsigned nb, Vec<float> Rrun,
                                            Vec<float> dtheta, float scale) {
+    auto item_ct1 = sycl::ext::oneapi::this_work_item::get_nd_item<3>();
     unsigned b = blockIdx.x * blockDim.x + threadIdx.x;
     if (b >= nb) return;
     Vec3f w(scale * dtheta.data[3 * b + 0], scale * dtheta.data[3 * b + 1],
@@ -311,8 +317,9 @@ inline void launch_compose_rrun(unsigned nb, Vec<float> &Rrun,
 // Rigidify target from the integrated rotation: out[v] = centroid(eval_x) +
 // R_run[b] * ybar_k. Centroid from eval_x (translation is exact); only the
 // rotation is anchored. Cloth entries untouched.
-static __global__ void rigidify_from_rot_kernel(DataSet data, Vec<Vec3f> eval_x,
+static void rigidify_from_rot_kernel(DataSet data, Vec<Vec3f> eval_x,
                                                Vec<float> Rrun, Vec<Vec3f> out) {
+    auto item_ct1 = sycl::ext::oneapi::this_work_item::get_nd_item<3>();
     const unsigned b = blockIdx.x;
     const unsigned tid = threadIdx.x, T = blockDim.x;
     const PdrdBodyProp bp = data.prop.pdrd_body[b];
@@ -423,8 +430,9 @@ inline void launch_project_bodies(const RigidMap &rm, Vec<float> &u) {
 // Per-PDRD-vertex rotated rest vector p_v = R_b ybar_k, indexed by GLOBAL vertex
 // id (the prolong / restrict kernels are one-thread-per-vertex). Cloth entries
 // are left untouched (unused).
-static __global__ void scatter_prot_kernel(Vec<RigidState> state, DataSet data,
+static void scatter_prot_kernel(Vec<RigidState> state, DataSet data,
                                            Vec<Vec3f> prot) {
+    auto item_ct1 = sycl::ext::oneapi::this_work_item::get_nd_item<3>();
     const unsigned b = blockIdx.x;
     const RigidState s = state.data[b];
     if (s.N == 0) return;
@@ -439,8 +447,9 @@ static __global__ void scatter_prot_kernel(Vec<RigidState> state, DataSet data,
 }
 
 // x_vert = P u_red. One thread per vertex.
-static __global__ void prolong_rigid_kernel(RigidMap rm, Vec<float> u,
+static void prolong_rigid_kernel(RigidMap rm, Vec<float> u,
                                             Vec<float> x) {
+    auto item_ct1 = sycl::ext::oneapi::this_work_item::get_nd_item<3>();
     unsigned v = blockIdx.x * blockDim.x + threadIdx.x;
     if (v >= rm.nrow) return;
     unsigned b = rm.vbody.data[v];
@@ -464,8 +473,9 @@ static __global__ void prolong_rigid_kernel(RigidMap rm, Vec<float> u,
 
 // u_red = P^T y_vert. Cloth entries written directly (disjoint); PDRD body blocks
 // accumulated with atomics. u must be pre-zeroed on the body region.
-static __global__ void restrict_rigid_kernel(RigidMap rm, Vec<float> y,
+static void restrict_rigid_kernel(RigidMap rm, Vec<float> y,
                                              Vec<float> u) {
+    auto item_ct1 = sycl::ext::oneapi::this_work_item::get_nd_item<3>();
     unsigned v = blockIdx.x * blockDim.x + threadIdx.x;
     if (v >= rm.nrow) return;
     Vec3f yv(y.data[3 * v + 0], y.data[3 * v + 1], y.data[3 * v + 2]);
@@ -677,8 +687,9 @@ inline void launch_restrict_rigid(const RigidMap &rm, const Vec<float> &y,
 // entry is not representable in the reduced coordinates at all, so the body
 // block is zeroed. That loses nothing: launch_prolong_rigid overwrites every
 // body vertex from the body's reduced DOFs after the solve.
-static __global__ void seed_restrict_rigid_kernel(RigidMap rm, Vec<float> x,
+static void seed_restrict_rigid_kernel(RigidMap rm, Vec<float> x,
                                                   Vec<float> u) {
+    auto item_ct1 = sycl::ext::oneapi::this_work_item::get_nd_item<3>();
     unsigned v = blockIdx.x * blockDim.x + threadIdx.x;
     if (v >= rm.nrow) return;
     if (rm.vbody.data[v] != RIGID_UNSET) return;
@@ -701,9 +712,10 @@ inline void launch_seed_restrict(const RigidMap &rm, const Vec<float> &x,
 // vector. This is the coordinate image of the deformable lock projector:
 // cloth rows are identity-mapped by P, while PDRD body coordinates must remain
 // in their 6-DOF representation and are handled by launch_project_bodies.
-static __global__ void copy_projected_cloth_kernel(RigidMap rm,
+static void copy_projected_cloth_kernel(RigidMap rm,
                                                     Vec<float> full,
                                                     Vec<float> reduced) {
+    auto item_ct1 = sycl::ext::oneapi::this_work_item::get_nd_item<3>();
     const unsigned v = blockIdx.x * blockDim.x + threadIdx.x;
     if (v >= rm.nrow || rm.vbody.data[v] != RIGID_UNSET) return;
     const unsigned o = rm.cloth_off.data[v];
@@ -726,8 +738,9 @@ inline void launch_copy_projected_cloth(const RigidMap &rm,
 // translation that the Newton correction must remove. A hinge already removes
 // every translation DOF; its compatibility is checked on the host before this
 // kernel is used, and this kernel leaves its zero translation untouched.
-static __global__ void translation_lock_particular_kernel(
+static void translation_lock_particular_kernel(
     RigidMap rm, DataSet data, Vec<Vec3f> drift, Vec<float> u) {
+    auto item_ct1 = sycl::ext::oneapi::this_work_item::get_nd_item<3>();
     const unsigned b = blockIdx.x * blockDim.x + threadIdx.x;
     if (b >= rm.n_bodies) return;
     const unsigned li = rm.tlock.data[b];
@@ -755,10 +768,11 @@ inline void launch_translation_lock_particular(const RigidMap &rm,
 // Extract the per-body rotation DOFs (dtheta_b) of the reduced solution `u`
 // (layout: [3*ncloth cloth dofs][6 per body: dx(3), dtheta(3)]) into
 // dtheta_out[3*nb]. Used to integrate the applied rotation onto R_run.
-static __global__ void extract_body_dtheta_kernel(unsigned nb,
+static void extract_body_dtheta_kernel(unsigned nb,
                                                   unsigned body_base,
                                                   Vec<float> u,
                                                   Vec<float> dtheta_out) {
+    auto item_ct1 = sycl::ext::oneapi::this_work_item::get_nd_item<3>();
     unsigned b = blockIdx.x * blockDim.x + threadIdx.x;
     if (b >= nb) return;
     const float *q = u.data + body_base + 6u * b + 3u; // rotation block
@@ -841,7 +855,7 @@ inline void factor6_host_to_G(const float Kf[36], float Gout[36]) {
 
 // atomicAdd form of the rigid sandwich J^T H J into a 6x6 (row-major), with the
 // rigid Jacobian J = [ I3 | -skew(p) ] (3x6), p = R ybar_k.
-__device__ inline void rigid_sandwich_atomic(float *K6, const Vec3f &p,
+inline void rigid_sandwich_atomic(float *K6, const Vec3f &p,
                                             const Mat3x3f &H) {
     float J[3][6];
     for (unsigned i = 0; i < 3; ++i)
@@ -867,10 +881,11 @@ __device__ inline void rigid_sandwich_atomic(float *K6, const Vec3f &p,
 // the contact diagonal is read straight from the assembled matrix on the body's
 // own vertices after same_pdrd_body filtering. One block per body. K_out is
 // [36*nb], row-major.
-static __global__ void assemble_rigid_K_kernel(DataSet data, DynCSRMat A,
+static void assemble_rigid_K_kernel(DataSet data, DynCSRMat A,
                                               FixedCSRMat B,
                                               Vec<RigidState> state, float dt,
                                               Vec<float> K_out) {
+    auto item_ct1 = sycl::ext::oneapi::this_work_item::get_nd_item<3>();
     const unsigned b = blockIdx.x;
     const unsigned tid = threadIdx.x, T = blockDim.x;
     const RigidState s = state.data[b];
@@ -945,9 +960,10 @@ inline void build_rigid_precond(RigidPrecond &P, const DataSet &data,
 }
 
 // z_body = G^T (G r_body) per body (one block per body, 6 threads).
-static __global__ void precond_rigid_pdrd_kernel(Vec<float> Gbody,
+static void precond_rigid_pdrd_kernel(Vec<float> Gbody,
                                                unsigned body_base, Vec<float> r,
                                                Vec<float> z) {
+    auto item_ct1 = sycl::ext::oneapi::this_work_item::get_nd_item<3>();
     unsigned b = blockIdx.x;
     unsigned p = threadIdx.x;
     if (p >= 6) return;
@@ -968,9 +984,10 @@ static __global__ void precond_rigid_pdrd_kernel(Vec<float> Gbody,
 
 // z_cloth = inv_diag * r for cloth vertices (3x3 block-Jacobi). One thread per
 // vertex; PDRD vertices are skipped (handled by the per-body block above).
-static __global__ void precond_rigid_cloth_kernel(RigidMap rm,
+static void precond_rigid_cloth_kernel(RigidMap rm,
                                                   Vec<Mat3x3f> inv_diag,
                                                   Vec<float> r, Vec<float> z) {
+    auto item_ct1 = sycl::ext::oneapi::this_work_item::get_nd_item<3>();
     unsigned v = blockIdx.x * blockDim.x + threadIdx.x;
     if (v >= rm.nrow) return;
     if (rm.vbody.data[v] != RIGID_UNSET) return;

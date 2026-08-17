@@ -12,19 +12,21 @@
 #ifndef ARAP_HPP
 #define ARAP_HPP
 
+#include <sycl/sycl.hpp>
+#include <dpct/dpct.hpp>
 #include "../../common.hpp"
 #include "../../data.hpp"
 
 namespace ARAP {
 
-__device__ float energy(const Vec2f &a, float mu, float lmd) {
+float energy(const Vec2f &a, float mu, float lmd) {
     float a0 = a[0] - 1.0f;
     float a1 = a[1] - 1.0f;
     float trace_strain = a0 + a1;
     return mu * (a0 * a0 + a1 * a1) + 0.5f * lmd * (trace_strain * trace_strain);
 }
 
-__device__ float energy(const Vec3f &a, float mu, float lmd) {
+float energy(const Vec3f &a, float mu, float lmd) {
     float a0 = a[0] - 1.0f;
     float a1 = a[1] - 1.0f;
     float a2 = a[2] - 1.0f;
@@ -33,7 +35,7 @@ __device__ float energy(const Vec3f &a, float mu, float lmd) {
            0.5f * lmd * (trace_strain * trace_strain);
 }
 
-__device__ DiffTable2 make_diff_table2(const Vec2f &a, float mu, float lmd) {
+DiffTable2 make_diff_table2(const Vec2f &a, float mu, float lmd) {
     DiffTable2 table;
 
     float trace_strain = (a[0] - 1.0f) + (a[1] - 1.0f);
@@ -48,7 +50,7 @@ __device__ DiffTable2 make_diff_table2(const Vec2f &a, float mu, float lmd) {
     return table;
 }
 
-__device__ DiffTable3 make_diff_table3(const Vec3f &a, float mu, float lmd) {
+DiffTable3 make_diff_table3(const Vec3f &a, float mu, float lmd) {
     DiffTable3 table;
 
     float trace_strain = (a[0] - 1.0f) + (a[1] - 1.0f) + (a[2] - 1.0f);

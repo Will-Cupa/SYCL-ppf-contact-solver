@@ -14,6 +14,8 @@
 #ifndef RIGID_CORE_HPP
 #define RIGID_CORE_HPP
 
+#include <sycl/sycl.hpp>
+#include <dpct/dpct.hpp>
 #include "../../data.hpp"
 #include <cmath>
 #include "../../float_math.hpp"
@@ -21,7 +23,7 @@
 namespace RigidCore {
 
 // 3x3 skew-symmetric matrix of a vector: skew(v) w = v x w.
-__device__ __host__ inline Mat3x3f rigid_skew(const Vec3f &v) {
+inline Mat3x3f rigid_skew(const Vec3f &v) {
     Mat3x3f S;
     S(0, 0) = 0.0f;   S(0, 1) = -v[2]; S(0, 2) = v[1];
     S(1, 0) = v[2];   S(1, 1) = 0.0f;  S(1, 2) = -v[0];
@@ -30,13 +32,13 @@ __device__ __host__ inline Mat3x3f rigid_skew(const Vec3f &v) {
 }
 
 // Inverse of skew: the axial vector of the antisymmetric part of A.
-__device__ __host__ inline Vec3f rigid_skew_inv(const Mat3x3f &A) {
+inline Vec3f rigid_skew_inv(const Mat3x3f &A) {
     return Vec3f(0.5f * (A(2, 1) - A(1, 2)), 0.5f * (A(0, 2) - A(2, 0)),
                  0.5f * (A(1, 0) - A(0, 1)));
 }
 
 // Exponential map so(3) -> SO(3) (Rodrigues), numerically safe near zero.
-__device__ __host__ inline Mat3x3f rigid_exp_so3(const Vec3f &theta) {
+inline Mat3x3f rigid_exp_so3(const Vec3f &theta) {
     float a2 = theta[0] * theta[0] + theta[1] * theta[1] + theta[2] * theta[2];
     float a = std::sqrt(a2);
     Mat3x3f K = rigid_skew(theta);

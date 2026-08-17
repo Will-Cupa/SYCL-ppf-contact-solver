@@ -6,11 +6,13 @@
 #ifndef ROW_DEDUPE_HPP
 #define ROW_DEDUPE_HPP
 
+#include <sycl/sycl.hpp>
+#include <dpct/dpct.hpp>
 #include "../data.hpp"
 
 // Restore the heap property at `root` over the parallel arrays `index[0, n)`
 // and `value[0, n)`, ordering on the index and carrying the block with it.
-__host__ __device__ inline void pair_sift(unsigned *index, Mat3x3f *value,
+inline void pair_sift(unsigned *index, Mat3x3f *value,
                                           unsigned n, unsigned root) {
     for (;;) {
         unsigned largest = root;
@@ -38,7 +40,7 @@ __host__ __device__ inline void pair_sift(unsigned *index, Mat3x3f *value,
 // Sort `index[0, n)` ascending, carrying `value[0, n)` alongside. In place, no
 // scratch, no recursion, and the same n log n on every input, which is the
 // point: the counts this runs over are usually tiny but are not bounded.
-__host__ __device__ inline void sort_pairs(unsigned *index, Mat3x3f *value,
+inline void sort_pairs(unsigned *index, Mat3x3f *value,
                                            unsigned n) {
     if (n < 2) {
         return;
@@ -93,7 +95,7 @@ __host__ __device__ inline void sort_pairs(unsigned *index, Mat3x3f *value,
 //
 // `appended_begin` reports where the surviving carried entries end and the
 // surviving appended ones start.
-__host__ __device__ inline unsigned row_dedupe(unsigned *index, Mat3x3f *value,
+inline unsigned row_dedupe(unsigned *index, Mat3x3f *value,
                                                unsigned nnz, unsigned carried,
                                                unsigned *appended_begin) {
     if (carried > nnz) {

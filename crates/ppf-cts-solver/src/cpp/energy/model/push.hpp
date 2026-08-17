@@ -6,15 +6,17 @@
 #ifndef PUSH_HPP
 #define PUSH_HPP
 
+#include <sycl/sycl.hpp>
+#include <dpct/dpct.hpp>
 #include "../../common.hpp"
 #include "../../data.hpp"
 
 namespace push {
 
-__device__ float sqr(float x) { return x * x; }
-__device__ float cube(float x) { return x * x * x; }
+float sqr(float x) { return x * x; }
+float cube(float x) { return x * x * x; }
 
-__device__ float energy(const Vec3f &e, const Vec3f &normal, float eps) {
+float energy(const Vec3f &e, const Vec3f &normal, float eps) {
     float d = e.dot(normal);
     if (d < 0.0f) {
         return -cube(d) / (3.0f * eps);
@@ -23,7 +25,7 @@ __device__ float energy(const Vec3f &e, const Vec3f &normal, float eps) {
     }
 }
 
-__device__ Vec3f gradient(const Vec3f &e, const Vec3f &normal, float eps) {
+Vec3f gradient(const Vec3f &e, const Vec3f &normal, float eps) {
     float d = e.dot(normal);
     if (d < 0.0f) {
         return -sqr(d) / eps * normal;
@@ -32,7 +34,7 @@ __device__ Vec3f gradient(const Vec3f &e, const Vec3f &normal, float eps) {
     }
 }
 
-__device__ float curvature(const Vec3f &e, const Vec3f &normal, float eps) {
+float curvature(const Vec3f &e, const Vec3f &normal, float eps) {
     float d = e.dot(normal);
     if (d < 0.0f) {
         return -2.0f * d / eps;
@@ -41,7 +43,7 @@ __device__ float curvature(const Vec3f &e, const Vec3f &normal, float eps) {
     }
 }
 
-__device__ Mat3x3f hessian(const Vec3f &e, const Vec3f &normal, float eps) {
+Mat3x3f hessian(const Vec3f &e, const Vec3f &normal, float eps) {
     return curvature(e, normal, eps) * normal * normal.transpose();
 }
 
